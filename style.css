@@ -167,7 +167,6 @@ body {
  padding: 5px 10px;
  margin-right: 10px;
  cursor: pointer;
- transition: all 0.2s ease;
 }
 #upper-week.active,
 #lower-week.active {
