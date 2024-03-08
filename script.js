@@ -60,7 +60,7 @@ const scheduleData = {
     {
       "time": "16:20",
       "week": "all", // Specify which weeks this lesson applies to (all, upper, or lower)
-      "course": "Среміна",
+      "course": "Семінар",
       "title": "Історія раннього Нового часу",
       "teacher": "Грегуль А. Ю",
       "location": "453 аудиторія",
