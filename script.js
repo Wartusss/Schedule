@@ -127,33 +127,6 @@ const scheduleData = {
       "additionalInfo": ""
     },
     {
-      "time": "14:40",
-      "week": "lower",
-      "course": "",
-      "title": "",
-      "teacher": "",
-      "location": "",
-      "additionalInfo": ""
-    },
-    {
-      "time": "16:20",
-      "week": "lower",
-      "course": "",
-      "title": "",
-      "teacher": "",
-      "location": "",
-      "additionalInfo": ""
-    },
-    {
-      "time": "17:55",
-      "week": "lower",
-      "course": "Мова",
-      "title": "Англійська / Французька / Німецька / Іспанська",
-      "teacher": "Шевченко О.Ф / Рижова І.А. / Симканич О.В. / Невинна Ю.П.",
-      "location": "153 / 456 / Онлайн / 452 ауд.",
-      "additionalInfo": ""
-    },
-    {
       "time": "13:05",
       "week": "upper",
       "course": "",
@@ -182,7 +155,7 @@ const scheduleData = {
     },
     {
       "time": "17:55",
-      "week": "upper",
+      "week": "all",
       "course": "Мова",
       "title": "Англійська / Французька / Німецька / Іспанська",
       "teacher": "Шевченко О.Ф / Рижова І.А. / Симканич О.В. / Невинна Ю.П.",
@@ -218,45 +191,37 @@ const days = document.querySelectorAll('.day');
 const scheduleContent = document.querySelectorAll('.schedule-content');
 const today = new Date().getDay();
 let currentDay = '';
-let currentWeek = 'upper';
+let currentWeek = 'upper'; // Set the default week to upper
+const lessonTimes = ["13:05", "14:40", "16:20", "17:55"];
+
 function displaySchedule(day) {
-  scheduleContent.forEach((content, index) => {
-    content.innerHTML = '';
+  scheduleContent.forEach(content => {
+    content.innerHTML = ''; // Clear existing schedule
   });
+
   const dayData = scheduleData[day];
-
   if (dayData && today !== 0) {
-    
-    if (day === 'thursday' && currentWeek === 'upper') {
-      const dayUpperData = dayData.filter(slot => slot.week === 'upper');
-
-      if (dayUpperData.length > 0) {
-        dayUpperData.forEach((timeSlotData, index) => {
-          
+    dayData.forEach(timeSlotData => {
+      if (timeSlotData.week === 'all' || timeSlotData.week === currentWeek) {
+        const lessonIndex = lessonTimes.indexOf(timeSlotData.time);
+        if (lessonIndex !== -1 && timeSlotData.course) {
           const classElement = document.createElement('div');
           classElement.classList.add('class');
           classElement.style.float = 'left';
-
-          
           const courseTitle = document.createElement('strong');
           courseTitle.textContent = timeSlotData.course;
           classElement.appendChild(courseTitle);
-
           const title = document.createElement('p');
           title.textContent = timeSlotData.title;
           classElement.appendChild(title);
-
           const teacher = document.createElement('p');
-          teacher.textContent = `${timeSlotData.teacher}`;
+          teacher.textContent = timeSlotData.teacher;
           classElement.appendChild(teacher);
-
           const br = document.createElement('br');
           classElement.appendChild(br);
-
           const location = document.createElement('p');
-          location.textContent = `${timeSlotData.location}`;
+          location.textContent = timeSlotData.location;
           classElement.appendChild(location);
-
           const additionalInfo = document.createElement('p');
           if (timeSlotData.additionalInfo.includes('https')) {
             const a = document.createElement('a');
@@ -264,66 +229,17 @@ function displaySchedule(day) {
             a.textContent = timeSlotData.additionalInfo;
             additionalInfo.appendChild(a);
           } else {
-            additionalInfo.textContent = `${timeSlotData.additionalInfo}`;
+            additionalInfo.textContent = timeSlotData.additionalInfo;
           }
           classElement.appendChild(additionalInfo);
-
-          
-          scheduleContent[index].appendChild(classElement);
-        });
-      } else {
-        
-        scheduleContent.forEach(content => content.innerHTML = '');
+          scheduleContent[lessonIndex].appendChild(classElement);
+        }
       }
-    } else {
-      dayData.forEach((timeSlotData, index) => {
-        
-        const appliesToWeek = timeSlotData.week === 'all' || timeSlotData.week === currentWeek;
-
-        if (appliesToWeek && timeSlotData.course) {
-         
-          const classElement = document.createElement('div');
-          classElement.classList.add('class');
-          classElement.style.float = 'left';
-
-          
-          const courseTitle = document.createElement('strong');
-          courseTitle.textContent = timeSlotData.course;
-          classElement.appendChild(courseTitle);
-
-          const title = document.createElement('p');
-          title.textContent = timeSlotData.title;
-          classElement.appendChild(title);
-
-          const teacher = document.createElement('p');
-          teacher.textContent = `${timeSlotData.teacher}`;
-          classElement.appendChild(teacher);
-
-          const br = document.createElement('br');
-          classElement.appendChild(br);
-
-          const location = document.createElement('p');
-          location.textContent = `${timeSlotData.location}`;
-          classElement.appendChild(location);
-
-          const additionalInfo = document.createElement('p');
-          if (timeSlotData.additionalInfo.includes('https')) {
-            const a = document.createElement('a');
-            a.href = timeSlotData.additionalInfo;
-            a.textContent = timeSlotData.additionalInfo;
-            additionalInfo.appendChild(a);
-          } else {
-            additionalInfo.textContent = `${timeSlotData.additionalInfo}`;
-          }
-          classElement.appendChild(additionalInfo);
-
-          
-          scheduleContent[index].appendChild(classElement);
-        } 
-      });
-    }
-  } 
+    });
+  }
 }
+
+// Add event listeners for day selection
 days.forEach(day => {
   day.addEventListener('click', () => {
     days.forEach(d => d.classList.remove('active'));
@@ -332,6 +248,8 @@ days.forEach(day => {
     displaySchedule(currentDay);
   });
 });
+
+// Add event listeners for week selection
 document.getElementById('upper-week').addEventListener('click', () => {
   currentWeek = 'upper';
   scheduleContent.forEach(content => content.innerHTML = '');
@@ -339,6 +257,7 @@ document.getElementById('upper-week').addEventListener('click', () => {
   document.getElementById('upper-week').classList.add('active');
   document.getElementById('lower-week').classList.remove('active');
 });
+
 document.getElementById('lower-week').addEventListener('click', () => {
   currentWeek = 'lower';
   scheduleContent.forEach(content => content.innerHTML = '');
@@ -346,9 +265,13 @@ document.getElementById('lower-week').addEventListener('click', () => {
   document.getElementById('lower-week').classList.add('active');
   document.getElementById('upper-week').classList.remove('active');
 });
+
+// Function to reset active day
 const resetActiveDay = () => {
   days.forEach(d => d.classList.remove('active'));
 };
+
+// Initialize schedule for today
 if (today !== 0) {
   const currentDayElement = days[today - 1];
   resetActiveDay();
