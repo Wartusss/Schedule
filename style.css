@@ -7,7 +7,6 @@ body {
  font-size: 16px;
  line-height: 1.5;
 }
-
 /* Container with rounded corners and slight shadow */
 .container {
  max-width: 100%;
@@ -17,14 +16,12 @@ body {
  padding: 20px;
  background-color: #fff; /* White background */
 }
-
 /* Flexbox controls with spacing and hover effect */
 .controls {
  display: flex;
  justify-content: space-between;
  margin-bottom: 15px;
 }
-
 .controls button {
  padding: 10px 25px;
  border: none;
@@ -37,19 +34,16 @@ body {
  font-weight: bold;
  text-transform: uppercase;
 }
-
 .controls button:hover {
  background-color: #45a049; /* Darker green on hover */
  color: #fff;
 }
-
 /* Days with rounded corners and active state styling */
 .days {
  display: flex;
  justify-content: space-around;
  margin-bottom: 15px;
 }
-
 .days button {
  padding: 10px 20px;
  border: none;
@@ -61,23 +55,19 @@ body {
  font-size: 14px;
  font-weight: bold;
 }
-
 .days button.active {
  background-color: #3498db; /* Blue color for active state */
  color: #fff; /* White text */
 }
-
 .days button:hover {
  background-color: #2980b9; /* Darker blue on hover */
 }
-
 /* Full-width schedule for better layout */
 .schedule {
  display: flex;
  flex-wrap: wrap; /* Adjust for content wrapping */
  width: 100%;
 }
-
 /* Time bar with improved styling and text alignment */
 .time-bar {
  width: 50px;
@@ -93,13 +83,11 @@ body {
  font-size: 12px;
  font-weight: bold;
 }
-
 .time-slot {
  text-align: center;
  padding: 2px 0;
  margin-top: 5px;
 }
-
 /* Schedule content with improved padding and overflow handling */
 .schedule-content {
  flex: 1;
@@ -111,7 +99,6 @@ body {
  font-size: 14px;
  line-height: 1.2;
 }
-
 /* Schedule class with card-like styling and hover effect */
 .schedule .class {
  background: #fff; /* White background */
@@ -121,12 +108,11 @@ body {
  margin-bottom: 10px;
  transition: box-shadow 0.2s ease;
  cursor: pointer;
+ font-family: 'Open Sans', serif;
 }
-
 .schedule .class:hover {
  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
 }
-
 .schedule .class strong {
  display: flex;
  justify-content: center;
@@ -141,44 +127,36 @@ body {
  cursor: pointer;
  transition: all 0.2s ease;
 }
-
 .schedule .class strong:hover {
  background-color: #2980b9; /* Darker blue on hover */
 }
-
 .schedule .class p,
 .schedule .class strong {
  display: block !important;
  margin-bottom: 5px;
 }
-
 .schedule .class i {
  font-size: 16px;
  color: #ccc;
  margin-left: auto;
 }
-
 /* Style for today's button with subtle background change */
 .days button.active-today {
  background-color: #ecf0f1; /* Light gray background */
  color: #444; /* Slightly darker text */
 }
-
 /* Text formatting for schedule content as requested */
 .schedule-content .class p,
 .schedule-content .class strong {
  line-height: 1.2;
 }
-
 .schedule-content .class br {
  display: none;
 }
-
 .controls button.active {
  background-color: #4CAF50; /* Green color */
  color: #fff;
 }
-
 /* Custom styling for upper and lower week buttons */
 #upper-week,
 #lower-week {
@@ -191,21 +169,18 @@ body {
  cursor: pointer;
  transition: all 0.2s ease;
 }
-
 #upper-week.active,
 #lower-week.active {
  background-color: #4CAF50; /* Green color */
  color: #fff;
  border-color: #4CAF50;
 }
-
 #upper-week:hover,
 #lower-week:hover {
  background-color: #e6e6e6;
  color: #444;
  border-color: #ccc;
 }
-
 /* Media queries for responsive design */
 @media (max-width: 768px) {
  /* Styles for smaller screens */
@@ -228,4 +203,21 @@ body {
   .day {
     margin-bottom: 10px;
   }
+}
+/* Custom CSS for this specific project (you may remove these if they are not needed for your project) */
+/* Fix for lines extending beyond the boundaries of objects and the schedule itself on small screens */
+@media (max-width: 768px) {
+  .schedule-content {
+    max-width: calc(100% - 40px); /* Adjust the max-width based on your design */
   }
+  .time-bar {
+    padding: 5px 0; /* Adjust the padding based on your design */
+  }
+  .time-slot {
+    font-size: 12px; /* Adjust the font size based on your design */
+  }
+  .schedule-content p,
+  .schedule-content strong {
+    font-size: 14px; /* Adjust the font size based on your design */
+  }
+}
