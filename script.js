@@ -2,7 +2,7 @@ const scheduleData = {
   "monday": [
     {
       "time": "13:05",
-      "week": "all", // Specify which weeks this lesson applies to (all, upper, or lower)
+      "week": "all",
       "course": "",
       "title": "",
       "teacher": "",
@@ -11,7 +11,7 @@ const scheduleData = {
     },
     {
       "time": "14:40",
-      "week": "all", // Specify which weeks this lesson applies to (all, upper, or lower)
+      "week": "all",
       "course": "Лекція",
       "title": "Новітня Історія України",
       "teacher": "Шевченко О.Ф / Рижова І.А. / Симканич О.В. / Невинна Ю.П.",
@@ -20,7 +20,7 @@ const scheduleData = {
     },
     {
       "time": "16:20",
-      "week": "all", // Specify which weeks this lesson applies to (all, upper, or lower)
+      "week": "all",
       "course": "Лекція",
       "title": "Історія політики країн Заходу щодо України",
       "teacher": "Машевський О.П.",
@@ -29,19 +29,19 @@ const scheduleData = {
     },
     {
       "time": "17:55",
-      "week": "all", // Specify which weeks this lesson applies to (all, upper, or lower)
+      "week": "all",
       "course": "Лекція",
       "title": "Історія раннього Нового часу",
       "teacher": "Пількевич А. Л.",
       "location": "Онлайн",
       "additionalInfo": "https://us02web.zoom.us/j/71399386454?pwd=RitDZGxhUVpWcHFpRkVUMU9ER0J3QT09"
     },
-    // Other lesson objects for different time slots and weeks
+    
   ],
   "tuesday": [
     {
       "time": "13:05",
-      "week": "all", // Specify which weeks this lesson applies to (all, upper, or lower)
+      "week": "all", 
       "course": "",
       "title": "",
       "teacher": "",
@@ -50,7 +50,7 @@ const scheduleData = {
     },
     {
       "time": "14:40",
-      "week": "all", // Specify which weeks this lesson applies to (all, upper, or lower)
+      "week": "all",
       "course": "Мова",
       "title": "Англійська / Французька / Німецька / Іспанська",
       "teacher": "Шевченко О.Ф / Рижова І.А. / Симканич О.В. / Невинна Ю.П.",
@@ -59,7 +59,7 @@ const scheduleData = {
     },
     {
       "time": "16:20",
-      "week": "all", // Specify which weeks this lesson applies to (all, upper, or lower)
+      "week": "all",
       "course": "Семінар",
       "title": "Історія раннього Нового часу",
       "teacher": "Грегуль А. Ю",
@@ -68,19 +68,19 @@ const scheduleData = {
     },
     {
       "time": "17:55",
-      "week": "all", // Specify which weeks this lesson applies to (all, upper, or lower)
+      "week": "all",
       "course": "Семінар",
       "title": "Історія Східної Європи та Росії",
       "teacher": "Гуменний С. Л.",
       "location": "438 аудиторія",
       "additionalInfo": ""
     },
-    // Other lesson objects for different time slots and weeks
+    
   ],
   "wednesday": [
     {
       "time": "13:05",
-      "week": "all", // Specify which weeks this lesson applies to (all, upper, or lower)
+      "week": "all",
       "course": "",
       "title": "",
       "teacher": "",
@@ -89,7 +89,7 @@ const scheduleData = {
     },
     {
       "time": "14:40",
-      "week": "all", // Specify which weeks this lesson applies to (all, upper, or lower)
+      "week": "all",
       "course": "Лекція",
       "title": "Історія Східної Європи та Росії",
       "teacher": "Мордвінцев В. М.",
@@ -98,7 +98,7 @@ const scheduleData = {
     },
     {
       "time": "16:20",
-      "week": "all", // Specify which weeks this lesson applies to (all, upper, or lower)
+      "week": "all",
       "course": "Семінар",
       "title": "Історія політичного устрою країн Західної Європи ",
       "teacher": "Іванов О. Ф.",
@@ -107,14 +107,14 @@ const scheduleData = {
     },
     {
       "time": "17:55",
-      "week": "all", // Specify which weeks this lesson applies to (all, upper, or lower)
+      "week": "all",
       "course": "Мова",
       "title": "Англійська / Французька / Німецька / Іспанська",
       "teacher": "Шевченко О.Ф / Рижова І.А. / Симканич О.В. / Невинна Ю.П.",
       "location": "153 / 456 / Онлайн / 452 ауд.",
       "additionalInfo": ""
     },
-    // Other lesson objects for different time slots and weeks
+    
   ],
   "thursday": [
     {
@@ -189,12 +189,12 @@ const scheduleData = {
       "location": "153 / 456 / Онлайн / 452 ауд.",
       "additionalInfo": ""
     },
-    // Other lesson objects for different time slots and weeks
+    
   ],
   "friday": [
     {
       "time": "13:05",
-      "week": "all", // Specify which weeks this lesson applies to (all, upper, or lower)
+      "week": "all",
       "course": "",
       "title": "",
       "teacher": "",
@@ -203,16 +203,16 @@ const scheduleData = {
     },
     {
       "time": "14:40",
-      "week": "all", // Specify which weeks this lesson applies to (all, upper, or lower)
+      "week": "all",
       "course": "Лекція",
       "title": "Дисципліна вільного вибору",
       "teacher": "",
       "location": "Онлайн",
       "additionalInfo": "https://telegra.ph/Discipl%D1%96na-v%D1%96lnogo-viboru-studenta-03-08"
     },
-    // Other lesson objects for different time slots and weeks
+    
   ],
-  // Schedule data for other days
+ 
 };
 const days = document.querySelectorAll('.day');
 const scheduleContent = document.querySelectorAll('.schedule-content');
@@ -221,23 +221,23 @@ let currentDay = '';
 let currentWeek = 'upper';
 function displaySchedule(day) {
   scheduleContent.forEach((content, index) => {
-    content.innerHTML = ''; // Clear schedule content for each time slot
+    content.innerHTML = '';
   });
   const dayData = scheduleData[day];
 
   if (dayData && today !== 0) {
-    // Check if it's Thursday and upper week is selected
+    
     if (day === 'thursday' && currentWeek === 'upper') {
       const dayUpperData = dayData.filter(slot => slot.week === 'upper');
 
       if (dayUpperData.length > 0) {
         dayUpperData.forEach((timeSlotData, index) => {
-          // Create elements to display the schedule information
+          
           const classElement = document.createElement('div');
           classElement.classList.add('class');
           classElement.style.float = 'left';
 
-          // Populate the elements with schedule data
+          
           const courseTitle = document.createElement('strong');
           courseTitle.textContent = timeSlotData.course;
           classElement.appendChild(courseTitle);
@@ -268,25 +268,25 @@ function displaySchedule(day) {
           }
           classElement.appendChild(additionalInfo);
 
-          // Append the schedule information to the appropriate time slot
+          
           scheduleContent[index].appendChild(classElement);
         });
       } else {
-        // Clear schedule content if no data is found for upper week on Thursday
+        
         scheduleContent.forEach(content => content.innerHTML = '');
       }
     } else {
       dayData.forEach((timeSlotData, index) => {
-        // Check if the lesson applies to the selected week or all weeks
+        
         const appliesToWeek = timeSlotData.week === 'all' || timeSlotData.week === currentWeek;
 
         if (appliesToWeek && timeSlotData.course) {
-          // Create elements to display the schedule information
+         
           const classElement = document.createElement('div');
           classElement.classList.add('class');
           classElement.style.float = 'left';
 
-          // Populate the elements with schedule data
+          
           const courseTitle = document.createElement('strong');
           courseTitle.textContent = timeSlotData.course;
           classElement.appendChild(courseTitle);
@@ -317,7 +317,7 @@ function displaySchedule(day) {
           }
           classElement.appendChild(additionalInfo);
 
-          // Append the schedule information to the appropriate time slot
+          
           scheduleContent[index].appendChild(classElement);
         } 
       });
