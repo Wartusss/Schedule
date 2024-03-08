@@ -7,7 +7,7 @@ const scheduleData = {
       "title": "",
       "teacher": "",
       "location": "",
-      "additionalInfo": "Some additional information for Monday"
+      "additionalInfo": ""
     },
     {
       "time": "14:40",
@@ -224,28 +224,39 @@ function displaySchedule(day) {
     content.innerHTML = ''; // Clear schedule content for each time slot
   });
   const dayData = scheduleData[day];
-  if (dayData) {
+
+  if (dayData && today !== 0) {
+    // Check if it's Thursday and upper week is selected
     if (day === 'thursday' && currentWeek === 'upper') {
       const dayUpperData = dayData.filter(slot => slot.week === 'upper');
+
       if (dayUpperData.length > 0) {
         dayUpperData.forEach((timeSlotData, index) => {
+          // Create elements to display the schedule information
           const classElement = document.createElement('div');
           classElement.classList.add('class');
           classElement.style.float = 'left';
+
+          // Populate the elements with schedule data
           const courseTitle = document.createElement('strong');
           courseTitle.textContent = timeSlotData.course;
           classElement.appendChild(courseTitle);
+
           const title = document.createElement('p');
           title.textContent = timeSlotData.title;
           classElement.appendChild(title);
+
           const teacher = document.createElement('p');
           teacher.textContent = `${timeSlotData.teacher}`;
           classElement.appendChild(teacher);
+
           const br = document.createElement('br');
           classElement.appendChild(br);
+
           const location = document.createElement('p');
           location.textContent = `${timeSlotData.location}`;
           classElement.appendChild(location);
+
           const additionalInfo = document.createElement('p');
           if (timeSlotData.additionalInfo.includes('https')) {
             const a = document.createElement('a');
@@ -256,46 +267,59 @@ function displaySchedule(day) {
             additionalInfo.textContent = `${timeSlotData.additionalInfo}`;
           }
           classElement.appendChild(additionalInfo);
+
+          // Append the schedule information to the appropriate time slot
           scheduleContent[index].appendChild(classElement);
         });
       } else {
+        // Clear schedule content if no data is found for upper week on Thursday
         scheduleContent.forEach(content => content.innerHTML = '');
       }
     } else {
       dayData.forEach((timeSlotData, index) => {
+        // Check if the lesson applies to the selected week or all weeks
         const appliesToWeek = timeSlotData.week === 'all' || timeSlotData.week === currentWeek;
-        if (appliesToWeek) {
-          if (timeSlotData.course) {
-            const classElement = document.createElement('div');
-            classElement.classList.add('class');
-            classElement.style.float = 'left';
-            const courseTitle = document.createElement('strong');
-            courseTitle.textContent = timeSlotData.course;
-            classElement.appendChild(courseTitle);
-            const title = document.createElement('p');
-            title.textContent = timeSlotData.title;
-            classElement.appendChild(title);
-            const teacher = document.createElement('p');
-            teacher.textContent = `${timeSlotData.teacher}`;
-            classElement.appendChild(teacher);
-            const br = document.createElement('br');
-            classElement.appendChild(br);
-            const location = document.createElement('p');
-            location.textContent = `${timeSlotData.location}`;
-            classElement.appendChild(location);
-            const additionalInfo = document.createElement('p');
-            if (timeSlotData.additionalInfo.includes('https')) {
-              const a = document.createElement('a');
-              a.href = timeSlotData.additionalInfo;
-              a.textContent = timeSlotData.additionalInfo;
-              additionalInfo.appendChild(a);
-            } else {
-              additionalInfo.textContent = `${timeSlotData.additionalInfo}`;
-            }
-            classElement.appendChild(additionalInfo);
-            scheduleContent[index].appendChild(classElement);
-          } 
-        }
+
+        if (appliesToWeek && timeSlotData.course) {
+          // Create elements to display the schedule information
+          const classElement = document.createElement('div');
+          classElement.classList.add('class');
+          classElement.style.float = 'left';
+
+          // Populate the elements with schedule data
+          const courseTitle = document.createElement('strong');
+          courseTitle.textContent = timeSlotData.course;
+          classElement.appendChild(courseTitle);
+
+          const title = document.createElement('p');
+          title.textContent = timeSlotData.title;
+          classElement.appendChild(title);
+
+          const teacher = document.createElement('p');
+          teacher.textContent = `${timeSlotData.teacher}`;
+          classElement.appendChild(teacher);
+
+          const br = document.createElement('br');
+          classElement.appendChild(br);
+
+          const location = document.createElement('p');
+          location.textContent = `${timeSlotData.location}`;
+          classElement.appendChild(location);
+
+          const additionalInfo = document.createElement('p');
+          if (timeSlotData.additionalInfo.includes('https')) {
+            const a = document.createElement('a');
+            a.href = timeSlotData.additionalInfo;
+            a.textContent = timeSlotData.additionalInfo;
+            additionalInfo.appendChild(a);
+          } else {
+            additionalInfo.textContent = `${timeSlotData.additionalInfo}`;
+          }
+          classElement.appendChild(additionalInfo);
+
+          // Append the schedule information to the appropriate time slot
+          scheduleContent[index].appendChild(classElement);
+        } 
       });
     }
   } 
@@ -322,9 +346,13 @@ document.getElementById('lower-week').addEventListener('click', () => {
   document.getElementById('lower-week').classList.add('active');
   document.getElementById('upper-week').classList.remove('active');
 });
+const resetActiveDay = () => {
+  days.forEach(d => d.classList.remove('active'));
+};
 if (today !== 0) {
   const currentDayElement = days[today - 1];
-  currentDayElement.classList.add('active-today');
+  resetActiveDay();
+  currentDayElement.classList.add('active');
   currentDay = currentDayElement.dataset.day;
   displaySchedule(currentDay);
 }
