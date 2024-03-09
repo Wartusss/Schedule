@@ -1,6 +1,6 @@
 body {
- background-color: #f0f4f8;
- color: #444; 
+ background-color: #f0f4f8; /* Lighter background */
+ color: #444; /* Slightly darker text */
  font-family: 'Roboto', sans-serif;
  margin: 0;
  padding: 20px;
@@ -8,17 +8,17 @@ body {
  line-height: 1.5;
 }
 
-
+/* Container with rounded corners and slight shadow */
 .container {
  max-width: 100%;
  margin: 0 auto;
  border-radius: 8px; /* Rounded corners */
- box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
  padding: 20px;
- background-color: #fff; 
+ background-color: #fff; /* White background */
 }
 
-
+/* Flexbox controls with spacing and hover effect */
 .controls {
  display: flex;
  justify-content: space-between;
@@ -30,8 +30,8 @@ body {
  border: none;
  border-radius: 5px;
  cursor: pointer;
- background-color: #4CAF50; 
- color: #fff;
+ background-color: #4CAF50; /* Green color */
+ color: #fff; /* White text */
  transition: background-color 0.2s ease;
  font-size: 14px;
  font-weight: bold;
@@ -39,11 +39,11 @@ body {
 }
 
 .controls button:hover {
- background-color: #45a049; 
+ background-color: #45a049; /* Darker green on hover */
  color: #fff;
 }
 
-
+/* Days with rounded corners and active state styling */
 .days {
  display: flex;
  justify-content: space-around;
@@ -63,26 +63,26 @@ body {
 }
 
 .days button.active {
- background-color: #3498db; 
- color: #fff; 
+ background-color: #3498db; /* Blue color for active state */
+ color: #fff; /* White text */
 }
 
 .days button:hover {
- background-color: #2980b9;
+ background-color: #2980b9; /* Darker blue on hover */
 }
 
-
+/* Full-width schedule for better layout */
 .schedule {
  display: flex;
- flex-wrap: wrap; 
+ flex-wrap: wrap; /* Adjust for content wrapping */
  width: 100%;
 }
 
-
+/* Time bar with improved styling and text alignment */
 .time-bar {
  width: 50px;
- background-color: #ecf0f1; 
- color: #444; 
+ background-color: #ecf0f1; /* Light gray background */
+ color: #444; /* Slightly darker text */
  padding: 10px;
  border-radius: 5px;
  margin-right: 15px;
@@ -100,21 +100,21 @@ body {
  margin-top: 5px;
 }
 
-
+/* Schedule content with improved padding and overflow handling */
 .schedule-content {
  flex: 1;
  border: 1px solid #ddd;
- border-radius: 8px; 
+ border-radius: 8px; /* Rounded corners */
  padding: 25px;
- max-width: 100%; 
+ max-width: 100%; /* Prevent horizontal scroll on narrow screens */
  overflow-x: auto;
  font-size: 14px;
  line-height: 1.2;
 }
 
-
+/* Schedule class with card-like styling and hover effect */
 .schedule .class {
- background: #fff; 
+ background: #fff; /* White background */
  display: flex;
  flex-direction: column;
  align-items: flex-start;
@@ -124,7 +124,7 @@ body {
 }
 
 .schedule .class:hover {
- box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15); 
+ box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
 }
 
 .schedule .class strong {
@@ -133,8 +133,8 @@ body {
  align-items: center;
  padding: 15px 25px;
  border-radius: 8px;
- background-color: #3498db; 
- box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+ background-color: #3498db; /* Blue color */
+ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slight shadow */
  font-family: 'Roboto', sans-serif;
  font-size: 16px;
  color: #fff;
@@ -143,7 +143,7 @@ body {
 }
 
 .schedule .class strong:hover {
- background-color: #2980b9; 
+ background-color: #2980b9; /* Darker blue on hover */
 }
 
 .schedule .class p,
@@ -158,13 +158,13 @@ body {
  margin-left: auto;
 }
 
-
+/* Style for today's button with subtle background change */
 .days button.active-today {
- background-color: #ecf0f1;
- color: #444; 
+ background-color: #ecf0f1; /* Light gray background */
+ color: #444; /* Slightly darker text */
 }
 
-
+/* Text formatting for schedule content as requested */
 .schedule-content .class p,
 .schedule-content .class strong {
  line-height: 1.2;
@@ -175,11 +175,11 @@ body {
 }
 
 .controls button.active {
- background-color: #4CAF50; 
+ background-color: #4CAF50; /* Green color */
  color: #fff;
 }
 
-
+/* Custom styling for upper and lower week buttons */
 #upper-week,
 #lower-week {
  background-color: #f0f4f8;
@@ -212,13 +212,13 @@ body {
 .mode-buttons {
   display: flex;
   justify-content: space-between;
-  width: 180px; 
+  width: 180px; /* Adjust width as needed */
 }
 
 .mode-buttons {
   display: flex;
   justify-content: space-between;
-  width: 300px; 
+  width: 300px; /* Adjust width as needed */
 }
 
 .mode-buttons button {
@@ -233,23 +233,23 @@ body {
 }
 
 .mode-buttons button.active {
-  background-color: #4CAF50; 
+  background-color: #4CAF50; /* Green color */
   color: #fff;
 }
 
 .mode-buttons button:not(.active) {
-  background-color: #f0f4f8; 
+  background-color: #f0f4f8; /* Light gray */
   color: #444;
 }
 
 .mode-buttons button:hover {
-  background-color: #45a049; 
+  background-color: #45a049; /* Darker green on hover */
   color: #fff;
 }
 
-
+/* Media queries for responsive design */
 @media (max-width: 768px) {
-
+ /* Styles for smaller screens */
  .schedule {
   display: flex;
   flex-direction: column;
