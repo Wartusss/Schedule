@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
-
+<!-- Add this element inside the .container div -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Schedule</title>
   <link rel="stylesheet" href="style.css">
@@ -9,7 +9,11 @@
 <body>
   <div class="container">
     <div class="controls">
-      <button id="upper-week">Верхній тиждень</button>
+      <button id="upper-week" class="active">Верхній тиждень</button>
+      <div class="mode-buttons">
+        <button id="normal-mode" class="active">Європеїстика</button>
+        <button id="alternative-mode">Американістика</button>
+      </div>
       <button id="lower-week">Нижній тиждень</button>
     </div>
     <div class="days">
