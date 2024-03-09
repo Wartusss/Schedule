@@ -14,7 +14,7 @@ const scheduleData = {
       "week": "all",
       "course": "Лекція",
       "title": "Новітня Історія України",
-      "teacher": "Шевченко О.Ф / Рижова І.А. / Симканич О.В. / Невинна Ю.П.",
+      "teacher": "Вербовий О.Ф.",
       "location": "Онлайн",
       "additionalInfo": "https://meet.google.com/yao-yrwr-heg"
     },
