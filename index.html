@@ -7,15 +7,16 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <div class="controls">
-      <button id="upper-week" class="active">Верхній тиждень</button>
-      <div class="mode-buttons">
-        <button id="normal-mode" class="active">Європеїстика</button>
-        <button id="alternative-mode">Американістика</button>
-      </div>
-      <button id="lower-week">Нижній тиждень</button>
-    </div>
+<div class="button-container">
+  <div class="button-column">
+    <button id="upper-week" class="button">Верхній тиждень</button>
+    <button id="lower-week" class="button">Нижній тиждень</button>
+  </div>
+  <div class="button-column">
+    <button id="normal-mode" class="button">Європеїстика</button>
+    <button id="alternative-mode" class="button">Американістика</button>
+  </div>
+</div>
     <div class="days">
       <button class="day active" data-day="monday">Понеділок</button>
       <button class="day" data-day="tuesday">Вівторок</button>
