@@ -243,21 +243,13 @@ body {
 }
 
 .mode-buttons button:hover {
-  background-color: #45a049;
+  background-color: #45a049; /* Darker green on hover */
   color: #fff;
 }
 
-.button {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 10px;
-}
-
-
+/* Media queries for responsive design */
 @media (max-width: 768px) {
+ /* Styles for smaller screens */
  .schedule {
   display: flex;
   flex-direction: column;
@@ -273,17 +265,6 @@ body {
   .days {
     display: flex;
     flex-direction: column;
-  }
-  .button {
-    padding: 8px 16px;
-    font-size: 14px;
-  .button-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; 
-  }
- .button-column {
-    flex: 1; 
   }
   .day {
     margin-bottom: 10px;
