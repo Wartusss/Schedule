@@ -13,7 +13,7 @@ const scheduleData = {
     {
       "time": "14:40",
       "week": "all",
-      "course": "Лекція",
+      "course": "Lection",
       "title": "Новітня Історія України",
       "teacher": "Вербовий О.Ф.",
       "location": "Онлайн",
@@ -23,7 +23,7 @@ const scheduleData = {
     {
       "time": "16:20",
       "week": "all",
-      "course": "Лекція",
+      "course": "Lection",
       "title": "Історія політики країн Заходу щодо України",
       "teacher": "Машевський О.П.",
       "location": "Онлайн",
@@ -33,7 +33,7 @@ const scheduleData = {
     {
       "time": "17:55",
       "week": "all",
-      "course": "Лекція",
+      "course": "Lection",
       "title": "Історія раннього Нового часу",
       "teacher": "Пількевич А. Л.",
       "location": "Онлайн",
@@ -54,7 +54,7 @@ const scheduleData = {
     {
       "time": "14:40",
       "week": "all",
-      "course": "Лекція",
+      "course": "Lection",
       "title": "Новітня Історія України",
       "teacher": "Вербовий О.Ф.",
       "location": "Онлайн",
@@ -64,7 +64,7 @@ const scheduleData = {
     {
       "time": "16:20",
       "week": "all",
-      "course": "Лекція",
+      "course": "Lection",
       "title": "Історичні витоки політичної культури американського суспільства",
       "teacher": "Корнієнко А.Ю.",
       "location": "Онлайн",
@@ -74,7 +74,7 @@ const scheduleData = {
     {
       "time": "17:55",
       "week": "all",
-      "course": "Лекція",
+      "course": "Lection",
       "title": "Історія раннього Нового часу",
       "teacher": "Пількевич А. Л.",
       "location": "Онлайн",
@@ -96,7 +96,7 @@ const scheduleData = {
     {
       "time": "14:40",
       "week": "all",
-      "course": "Мова",
+      "course": "language",
       "title": "Англійська / Французька / Німецька / Іспанська",
       "teacher": "Шевченко О.Ф / Рижова І.А. / Симканич О.В. / Невинна Ю.П.",
       "location": "153 / 456 / Онлайн / 452 ауд.",
@@ -106,7 +106,7 @@ const scheduleData = {
     {
       "time": "16:20",
       "week": "all",
-      "course": "Семінар",
+      "course": "Seminar",
       "title": "Історія раннього Нового часу",
       "teacher": "Грегуль А. Ю",
       "location": "453 аудиторія",
@@ -116,7 +116,7 @@ const scheduleData = {
     {
       "time": "17:55",
       "week": "all",
-      "course": "Семінар",
+      "course": "Seminar",
       "title": "Історія Східної Європи та Росії",
       "teacher": "Гуменний С. Л.",
       "location": "438 аудиторія",
@@ -137,7 +137,7 @@ const scheduleData = {
     {
       "time": "14:40",
       "week": "all",
-      "course": "Мова",
+      "course": "language",
       "title": "Англійська / Французька / Німецька / Іспанська",
       "teacher": "Шевченко О.Ф / Рижова І.А. / Симканич О.В. / Невинна Ю.П.",
       "location": "153 / 456 / Онлайн / 452 ауд.",
@@ -147,7 +147,7 @@ const scheduleData = {
     {
       "time": "16:20",
       "week": "all",
-      "course": "Семінар",
+      "course": "Seminar",
       "title": "Історія раннього Нового часу",
       "teacher": "Грегуль А. Ю",
       "location": "453 аудиторія",
@@ -157,7 +157,7 @@ const scheduleData = {
     {
       "time": "17:55",
       "week": "all",
-      "course": "Семінар",
+      "course": "Seminar",
       "title": "Історія Східної Європи та Росії",
       "teacher": "Гуменний С. Л.",
       "location": "438 аудиторія",
@@ -179,7 +179,7 @@ const scheduleData = {
     {
       "time": "14:40",
       "week": "all",
-      "course": "Лекція",
+      "course": "Lection",
       "title": "Історія Східної Європи та Росії",
       "teacher": "Мордвінцев В. М.",
       "location": "Онлайн; 10:00",
@@ -189,7 +189,7 @@ const scheduleData = {
     {
       "time": "16:20",
       "week": "all",
-      "course": "Семінар",
+      "course": "Seminar",
       "title": "Історія політичного устрою країн Західної Європи ",
       "teacher": "Іванов О. Ф.",
       "location": "451 аудиторія",
@@ -199,7 +199,7 @@ const scheduleData = {
     {
       "time": "17:55",
       "week": "all",
-      "course": "Мова",
+      "course": "language",
       "title": "Англійська / Французька / Німецька / Іспанська",
       "teacher": "Шевченко О.Ф / Рижова І.А. / Симканич О.В. / Невинна Ю.П.",
       "location": "153 / 456 / Онлайн / 452 ауд.",
@@ -220,7 +220,7 @@ const scheduleData = {
     {
       "time": "14:40",
       "week": "all",
-      "course": "Лекція",
+      "course": "Lection",
       "title": "Історія Східної Європи та Росії",
       "teacher": "Мордвінцев В. М.",
       "location": "Онлайн; 10:00",
@@ -230,7 +230,7 @@ const scheduleData = {
     {
       "time": "16:20",
       "week": "all",
-      "course": "Семінар",
+      "course": "Seminar",
       "title": "Історія Канади",
       "teacher": "Сухобокова О.О.",
       "location": "448 аудиторія",
@@ -240,7 +240,7 @@ const scheduleData = {
     {
       "time": "17:55",
       "week": "all",
-      "course": "Мова",
+      "course": "language",
       "title": "Англійська / Французька / Німецька / Іспанська",
       "teacher": "Шевченко О.Ф / Рижова І.А. / Симканич О.В. / Невинна Ю.П.",
       "location": "153 / 456 / Онлайн / 452 ауд.",
@@ -252,7 +252,7 @@ const scheduleData = {
     {
       "time": "13:05",
       "week": "lower",
-      "course": "Лекція",
+      "course": "Lection",
       "title": "Історія політичного устрою країн Західної Європи ",
       "teacher": "Іванов О. Ф.",
       "location": "451 аудиторія",
@@ -272,7 +272,7 @@ const scheduleData = {
     {
       "time": "14:40",
       "week": "upper",
-      "course": "Семінар",
+      "course": "Seminar",
       "title": "Історія політики країн Заходу щодо України",
       "teacher": "Машевський О.П.",
       "location": "460 аудиторія",
@@ -282,7 +282,7 @@ const scheduleData = {
     {
       "time": "16:20",
       "week": "upper",
-      "course": "Семінар",
+      "course": "Seminar",
       "title": "Новітня історія України",
       "teacher": "Шкабко С. І.",
       "location": "452 аудиторія",
@@ -292,7 +292,7 @@ const scheduleData = {
     {
       "time": "17:55",
       "week": "all",
-      "course": "Мова",
+      "course": "language",
       "title": "Англійська / Французька / Німецька / Іспанська",
       "teacher": "Шевченко О.Ф / Рижова І.А. / Симканич О.В. / Невинна Ю.П.",
       "location": "153 / 456 / Онлайн / 452 ауд.",
@@ -303,7 +303,7 @@ const scheduleData = {
     {
       "time": "13:05",
       "week": "lower",
-      "course": "Лекція",
+      "course": "Lection",
       "title": "Історія Канади",
       "teacher": "Сухобокова О.О.",
       "location": "448 аудиторія",
@@ -313,8 +313,8 @@ const scheduleData = {
     {
       "time": "14:40",
       "week": "upper",
-      "course": "Семінар",
-      "course": "Семінар",
+      "course": "Seminar",
+      "course": "Seminar",
       "title": "Історичні витоки політичної культури американського суспільства",
       "teacher": "Корнієнко А.Ю.",
       "location": "448 аудиторія",
@@ -324,7 +324,7 @@ const scheduleData = {
     {
       "time": "16:20",
       "week": "upper",
-      "course": "Семінар",
+      "course": "Seminar",
       "title": "Новітня історія України",
       "teacher": "Шкабко С. І.",
       "location": "452 аудиторія",
@@ -334,7 +334,7 @@ const scheduleData = {
     {
       "time": "17:55",
       "week": "all",
-      "course": "Мова",
+      "course": "language",
       "title": "Англійська / Французька / Німецька / Іспанська",
       "teacher": "Шевченко О.Ф / Рижова І.А. / Симканич О.В. / Невинна Ю.П.",
       "location": "153 / 456 / Онлайн / 452 ауд.",
@@ -357,7 +357,7 @@ const scheduleData = {
     {
       "time": "14:40",
       "week": "all",
-      "course": "Лекція",
+      "course": "Lection",
       "title": "Дисципліна вільного вибору",
       "teacher": "",
       "location": "Онлайн",
@@ -378,7 +378,7 @@ const scheduleData = {
     {
       "time": "14:40",
       "week": "all",
-      "course": "Лекція",
+      "course": "Lection",
       "title": "Дисципліна вільного вибору",
       "teacher": "",
       "location": "Онлайн",
@@ -390,6 +390,16 @@ const scheduleData = {
 
   };
 
+const courseNames = {
+  "lection": "Лекція",
+  "seminar": "Семінар",
+  "language": "Мова"
+};
+
+const parameterIcons = {
+  "teacher": "<i class='far fa-user-tie'></i>&nbsp;",
+  "location": "<i class='fas fa-location-dot'></i>&nbsp;"
+};
 
 const days = document.querySelectorAll('.day');
 const scheduleContent = document.querySelectorAll('.schedule-content');
@@ -413,24 +423,28 @@ function displaySchedule(day) {
           classElement.classList.add('class');
           const courseTitle = document.createElement('strong');
           courseTitle.textContent = timeSlotData.course;
+          courseTitle.dataset.course = timeSlotData.course;
           classElement.appendChild(courseTitle);
           const title = document.createElement('p');
           title.textContent = timeSlotData.title;
           classElement.appendChild(title);
-          const teacher = document.createElement('p');
-          teacher.textContent = timeSlotData.teacher;
-          classElement.appendChild(teacher);
-          const br = document.createElement('br');
-          classElement.appendChild(br);
-          const location = document.createElement('p');
-          location.textContent = timeSlotData.location;
-          classElement.appendChild(location);
-          const additionalInfo = document.createElement('p');
+
+          Object.keys(parameterIcons).forEach(parameter => {
+            const icon = document.createElement('span');
+            icon.innerHTML = parameterIcons[parameter];
+            const parameterValue = document.createElement('span');
+            parameterValue.textContent = timeSlotData[parameter];
+            const parameterElement = document.createElement('p');
+            parameterElement.appendChild(icon);
+            parameterElement.appendChild(parameterValue);
+            classElement.appendChild(parameterElement);
+          });
+
+          const additionalInfo = document.createElement('button');
           if (timeSlotData.additionalInfo.includes('https')) {
-            const a = document.createElement('a');
-            a.href = timeSlotData.additionalInfo;
-            a.textContent = timeSlotData.additionalInfo;
-            additionalInfo.appendChild(a);
+            additionalInfo.textContent = 'Посилання';
+            additionalInfo.classList.add('additional-info-button');
+            additionalInfo.addEventListener('click', () => window.open(timeSlotData.additionalInfo, '_blank'));
           } else {
             additionalInfo.textContent = timeSlotData.additionalInfo;
           }
@@ -517,13 +531,13 @@ lowerWeekButton.addEventListener('click', () => {
 });
 
 if (today === 0) {
-  const currentDayElement = days[6]; // Sunday is at index 6
+  const currentDayElement = days[6];
   resetActiveDay();
   currentDayElement.classList.add('active');
   currentDay = currentDayElement.dataset.day;
   displaySchedule(currentDay);
 } else {
-  const currentDayElement = days[today - 1]; // Adjust index for Monday being at 0
+  const currentDayElement = days[today - 1];
   resetActiveDay();
   currentDayElement.classList.add('active');
   currentDay = currentDayElement.dataset.day;
