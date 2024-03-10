@@ -403,12 +403,11 @@ function displaySchedule(day) {
   scheduleContent.forEach(content => {
     content.innerHTML = ''; // Clear existing schedule
   });
-
   const dayData = scheduleData[day];
-  if (dayData && today !== 0) {
+  if (dayData) {
     dayData.forEach(timeSlotData => {
-      if ((timeSlotData.week === 'all' || timeSlotData.week === currentWeek) && 
-          ((!isAlternativeMode && !timeSlotData.alternative) || (isAlternativeMode && timeSlotData.alternative))) {
+      if ((day !== 'sunday' && day !== 'saturday') && ((timeSlotData.week === 'all'  timeSlotData.week === currentWeek) && 
+          ((!isAlternativeMode && !timeSlotData.alternative)  (isAlternativeMode && timeSlotData.alternative)))) {
         if (timeSlotData.course) {
           const classElement = document.createElement('div');
           classElement.classList.add('class');
