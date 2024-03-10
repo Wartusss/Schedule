@@ -425,7 +425,10 @@ function displaySchedule(day) {
           courseTitle.dataset.course = timeSlotData.course;
           classElement.appendChild(courseTitle);
           const title = document.createElement('p');
-          title.textContent = timeSlotData.title;
+          const titleText = document.createElement('span');
+          titleText.textContent = timeSlotData.title;
+          title.appendChild(titleText);
+          titleText.style.fontWeight = 'bold';
           classElement.appendChild(title);
 
           Object.keys(parameterIcons).forEach(parameter => {
