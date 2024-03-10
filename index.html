@@ -8,13 +8,15 @@
 </head>
 <body>
   <div class="container">
-    <div class="controls">
+  <div class="controls">
       <button id="upper-week" class="active">Верхній тиждень</button>
-      <div class="mode-buttons">
-        <button id="normal-mode" class="active">Європеїстика</button>
-        <button id="alternative-mode">Американістика</button>
-      </div>
       <button id="lower-week">Нижній тиждень</button>
+      <!-- Add empty space between buttons "lower" and "normal" -->
+      <div class="spacer"></div>
+      <div class="mode-buttons">
+          <button id="normal-mode" class="active">Європеїстика</button>
+          <button id="alternative-mode">Американістика</button>
+      </div>
     </div>
     <div class="days">
       <button class="day active" data-day="monday">Понеділок</button>
