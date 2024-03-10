@@ -456,7 +456,7 @@ days.forEach(day => {
   });
 });
 
-// Add event listeners for week selection
+
 document.getElementById('upper-week').addEventListener('click', () => {
   currentWeek = 'upper';
   scheduleContent.forEach(content => content.innerHTML = '');
@@ -473,7 +473,7 @@ document.getElementById('lower-week').addEventListener('click', () => {
   document.getElementById('upper-week').classList.remove('active');
 });
 
-// Event listener for mode selection
+
 document.getElementById('normal-mode').addEventListener('click', () => {
   if (isAlternativeMode) {
     isAlternativeMode = false;
@@ -492,7 +492,7 @@ document.getElementById('alternative-mode').addEventListener('click', () => {
   }
 });
 
-// Function to reset active day
+
 const resetActiveDay = () => {
   days.forEach(d => d.classList.remove('active'));
 };
@@ -520,7 +520,7 @@ lowerWeekButton.addEventListener('click', () => {
   }
 });
 
-// Initialize schedule for today
+// 
 if (today !== 0) {
   const currentDayElement = days[today - 1];
   resetActiveDay();
