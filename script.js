@@ -389,15 +389,15 @@ const scheduleData = {
 
   };
 
+const parameterIcons = {
+  "teacher": "<i class='far fa-user-tie'></i>&nbsp;",
+  "location": "<i class='fas fa-location-dot'></i>&nbsp;"
+};
+
 const courseNames = {
   "lection": "Лекція",
   "seminar": "Семінар",
   "language": "Мова"
-};
-
-const parameterIcons = {
-  "teacher": "<i class='far fa-user-tie'></i>&nbsp;",
-  "location": "<i class='fas fa-location-dot'></i>&nbsp;"
 };
 
 const days = document.querySelectorAll('.day');
