@@ -421,7 +421,7 @@ function displaySchedule(day) {
           const classElement = document.createElement('div');
           classElement.classList.add('class');
           const courseTitle = document.createElement('strong');
-          courseTitle.textContent = courseNames[timeSlotData.course]; // Retrieve translated course name
+          courseTitle.textContent = courseNames[timeSlotData.course];
           courseTitle.dataset.course = timeSlotData.course;
           classElement.appendChild(courseTitle);
           const title = document.createElement('p');
