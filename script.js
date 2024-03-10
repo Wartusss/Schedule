@@ -446,7 +446,6 @@ function displaySchedule(day) {
   }
 }
 
-// Add event listeners for day selection
 days.forEach(day => {
   day.addEventListener('click', () => {
     days.forEach(d => d.classList.remove('active'));
@@ -455,7 +454,6 @@ days.forEach(day => {
     displaySchedule(currentDay);
   });
 });
-
 
 document.getElementById('upper-week').addEventListener('click', () => {
   currentWeek = 'upper';
