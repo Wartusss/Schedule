@@ -390,8 +390,8 @@ const scheduleData = {
   };
 
 const parameterIcons = {
-  "teacher": "<i class='far fa-user-tie'></i>&nbsp;",
-  "location": "<i class='fas fa-location-dot'></i>&nbsp;"
+  "teacher": "<i class='fas fa-user-tie'></i>&nbsp;",
+  "location": "<i class='fas fa-map-marker-alt'></i>&nbsp;"
 };
 
 const courseNames = {
@@ -432,25 +432,25 @@ function displaySchedule(day) {
           classElement.appendChild(title);
 
           Object.keys(parameterIcons).forEach(parameter => {
-            const icon = document.createElement('span');
-            icon.innerHTML = parameterIcons[parameter];
-            const parameterValue = document.createElement('span');
-            parameterValue.textContent = timeSlotData[parameter];
-            const parameterElement = document.createElement('p');
-            parameterElement.appendChild(icon);
-            parameterElement.appendChild(parameterValue);
-            classElement.appendChild(parameterElement);
+            if (timeSlotData[parameter]) {
+              const icon = document.createElement('span');
+              icon.innerHTML = parameterIcons[parameter];
+              const parameterValue = document.createElement('span');
+              parameterValue.textContent = timeSlotData[parameter];
+              const parameterElement = document.createElement('p');
+              parameterElement.appendChild(icon);
+              parameterElement.appendChild(parameterValue);
+              classElement.appendChild(parameterElement);
+            }
           });
 
-          const additionalInfo = document.createElement('button');
-          if (timeSlotData.additionalInfo.includes('https')) {
+          if (timeSlotData.additionalInfo && timeSlotData.additionalInfo.includes('https')) {
+            const additionalInfo = document.createElement('button');
             additionalInfo.textContent = 'Посилання';
             additionalInfo.classList.add('additional-info-button');
             additionalInfo.addEventListener('click', () => window.open(timeSlotData.additionalInfo, '_blank'));
-          } else {
-            additionalInfo.textContent = timeSlotData.additionalInfo;
+            classElement.appendChild(additionalInfo);
           }
-          classElement.appendChild(additionalInfo);
           scheduleContent.forEach((content, index) => {
             if (lessonTimes[index] === timeSlotData.time) {
               content.appendChild(classElement);
