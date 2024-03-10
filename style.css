@@ -1,301 +1,26 @@
-body {
-  background-color: #f0f4f8;
-  color: #444;
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 20px;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.container {
-  max-width: 100%;
-  margin: 0 auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  background-color: #fff;
-}
-
-.controls {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 15px;
-}
-
-.controls button {
-  padding: 10px 25px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #4CAF50;
-  color: #fff;
-  transition: background-color 0.2s ease;
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.controls button:hover {
-  background-color: #45a049;
-  color: #fff;
-}
-
-.days {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 15px;
-}
-
-.days button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: transparent;
-  color: #333;
-  transition: background-color 0.2s ease;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.days button.active {
-  background-color: #3498db;
-  color: #fff;
-}
-
-.days button:hover {
-  background-color: #2980b9;
-}
-
-.schedule {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.time-bar {
-  width: 50px;
-  background-color: #ecf0f1;
-  color: #444;
-  padding: 10px;
-  border-radius: 5px;
-  margin-left: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.time-slot {
-  text-align: center;
-  padding: 2px 0;
-  margin-top: 5px;
-}
-
-.schedule-content {
-  flex: 1;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 25px;
-  max-width: 100%;
-  overflow-x: auto;
-  font-size: 14px;
-  line-height: 1.2;
-  margin-left: 15px;
-}
-
-.schedule .class {
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 10px;
-  transition: box-shadow 0.2s ease;
-  cursor: pointer;
-}
-
-.schedule .class:hover {
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-}
-
-.schedule .class strong {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px 25px;
-  border-radius: 8px;
-  background-color: #3498db;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.schedule .class strong[data-course="lection"] {
-  background-color: #3498db;
-}
-
-.schedule .class strong[data-course="seminar"] {
-  background-color: #2ecc71;
-}
-
-.schedule .class strong[data-course="language"] {
-  background-color: #f39c12;
-}
-
-.schedule .class strong:hover {
-  background-color: #2980b9;
-}
-
-.schedule .class p,
-.schedule .class strong {
-  display: block !important;
-  margin-bottom: 5px;
-}
-
-.schedule .class i {
-  font-size: 16px;
-  color: #ccc;
-  margin-left: auto;
-}
-
-.days button.active-today {
-  background-color: #ecf0f1;
-  color: #444;
-}
-
-.schedule-content .class p,
-.schedule-content .class strong {
-  line-height: 1.2;
-}
-
-.schedule-content .class br {
-  display: none;
-}
-
-.controls button.active {
-  background-color: #4CAF50;
-  color: #fff;
-}
-
-#upper-week,
-#lower-week {
-  background-color: #f0f0f0;
-  color: #333;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-right: 10px;
-}
-
-#upper-week.active,
-#lower-week.active {
-  background-color: #007bff;
-  color: #fff;
-}
-
-.mode-buttons {
-  display: flex;
-  justify-content: space-between;
-  width: 300px;
-}
-
-.mode-buttons button {
-  flex: 1;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.mode-buttons button.active {
-  background-color: #4CAF50;
-  color: #fff;
-}
-
-.mode-buttons button:not(.active) {
-  background-color: #f0f4f8;
-  color: #444;
-}
-
-.mode-buttons button:hover {
-  background-color: #45a049;
-  color: #fff;
-}
-
-.controls button {
-  padding: 10px 25px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #4CAF50;
-  color: #fff;
-  transition: background-color 0.2s ease;
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.schedule .class button.additional-info-button {
-  padding: 8px 15px;
-  border: 2px solid #3498db;
-  border-radius: 5px;
-  background-color: transparent;
-  color: #3498db;
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-}
-
-.schedule .class button.additional-info-button:hover {
-  background-color: #3498db;
-  color: #fff;
-}
-
-@media (max-width: 768px) {
-  .schedule {
-    display: flex;
-    flex-direction: column;
+  body {
+    background-color: #f0f4f8;
+    color: #444;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.5;
   }
 
-  .time-bar {
-    margin-left: 0;
-    margin-right: 15px;
-  }
-
-  .schedule-content {
-    margin-left: 0;
-    margin-right: 15px; 
-  }
-
-  .days {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #fff;
   }
 
   .controls {
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
-  }
-
-  .mode-buttons {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 10px;
+    justify-content: space-between;
+    margin-bottom: 15px;
   }
 
   .controls > div {
@@ -304,9 +29,329 @@ body {
   }
 
   .controls button,
-  .mode-buttons button {
-    flex: 1;
-    margin-right: 0;
+  .mode-buttons button,
+  .days button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: #fff;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    width: 150px; /* Set a fixed width for all buttons */
+  }
+
+  .controls button:hover,
+  .mode-buttons button:hover,
+  .days button:hover {
+    background-color: #45a049;
+  }
+
+  .controls button.active,
+  .mode-buttons button.active {
+    background-color: #4CAF50;
+    color: #fff;
+  }
+
+  .days {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
     margin-bottom: 10px;
   }
+
+  .days button {
+    flex: 1;
+    white-space: nowrap; /* Prevents text wrapping */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #333;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .days button.active {
+    background-color: #3498db;
+    color: #fff;
+  }
+
+  .days button .abbreviated-title {
+    display: none; /* Hide abbreviated title by default */
+  }
+
+  .days button:hover {
+    background-color: #2980b9;
+  }
+
+  .schedule {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .time-bar {
+    width: 50px;
+    background-color: #ecf0f1;
+    color: #444;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .time-slot {
+    text-align: center;
+    padding: 2px 0;
+    margin-top: 5px;
+  }
+
+  .schedule-content {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+    max-width: 100%;
+    overflow-x: auto;
+    font-size: 14px;
+    line-height: 1.2;
+    margin-left: 15px;
+  }
+
+  .schedule .class {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    transition: box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+
+  .schedule .class:hover {
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  }
+
+  .schedule .class strong {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 25px;
+    border-radius: 8px;
+    background-color: #3498db;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .schedule .class strong[data-course="lection"] {
+    background-color: #3498db;
+  }
+
+  .schedule .class strong[data-course="seminar"] {
+    background-color: #2ecc71;
+  }
+
+  .schedule .class strong[data-course="language"] {
+    background-color: #f39c12;
+  }
+
+  .schedule .class strong:hover {
+    background-color: #2980b9;
+  }
+
+  .schedule .class p,
+  .schedule .class strong {
+    display: block !important;
+    margin-bottom: 5px;
+  }
+
+  .schedule .class i {
+    font-size: 16px;
+    color: #ccc;
+    margin-left: auto;
+  }
+
+  .days button.active-today {
+    background-color: #ecf0f1;
+    color: #444;
+  }
+
+  .schedule-content .class p,
+  .schedule-content .class strong {
+    line-height: 1.2;
+  }
+
+  .schedule-content .class br {
+    display: none;
+  }
+
+  .controls button.active {
+    background-color: #4CAF50;
+    color: #fff;
+  }
+
+#upper-week,
+#lower-week {
+  width: 150px; /* Adjust the width as needed */
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensure padding is included in the width */
 }
+
+#upper-week.active,
+#lower-week.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+  .mode-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+  }
+
+  .mode-buttons button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .mode-buttons button.active {
+    background-color: #4CAF50;
+    color: #fff;
+  }
+
+  .mode-buttons button:not(.active) {
+    background-color: #f0f4f8;
+    color: #444;
+  }
+
+  .mode-buttons button:hover {
+    background-color: #45a049;
+    color: #fff;
+  }
+
+  .controls button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: #fff;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .schedule .class button.additional-info-button {
+    padding: 8px 15px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #3498db;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .schedule .class button.additional-info-button:hover {
+    background-color: #3498db;
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .schedule {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .time-bar {
+      margin-left: 0;
+      margin-right: 15px;
+    }
+
+    .schedule-content {
+      margin-left: 0;
+      margin-right: 15px; 
+    }
+
+    .days {
+      display: flex;
+      justify-content: space-between;
+      overflow-x: auto;
+      margin-bottom: 10px;
+      flex-wrap: nowrap; /* Ensures days are in a single line */
+    }
+
+    .days button {
+      flex: 0 0 auto;
+      width: auto; /* Allow buttons to grow to fit content */
+      margin-right: 10px;
+    }
+
+    .days button:last-child {
+      margin-right: 0;
+    }
+
+    .days button .full-title {
+      display: none; /* Hide full title on small screens */
+    }
+
+    .days button .abbreviated-title {
+      display: inline; /* Display abbreviated title on small screens */
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .mode-buttons {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .controls > div {
+      flex: 1;
+      margin-right: 10px;
+    }
+
+    .controls button,
+    .mode-buttons button {
+      padding: 10px 20px; /* Set padding to match "lower" week button */
+      flex: 1;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
