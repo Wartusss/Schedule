@@ -406,8 +406,8 @@ function displaySchedule(day) {
   const dayData = scheduleData[day];
   if (dayData) {
     dayData.forEach(timeSlotData => {
-      if ((day !== 'sunday' && day !== 'saturday') && ((timeSlotData.week === 'all'  timeSlotData.week === currentWeek) && 
-          ((!isAlternativeMode && !timeSlotData.alternative)  (isAlternativeMode && timeSlotData.alternative)))) {
+      if ((day !== 'sunday' && day !== 'saturday') && ((timeSlotData.week === 'all' || timeSlotData.week === currentWeek) && 
+          ((!isAlternativeMode && !timeSlotData.alternative) || (isAlternativeMode && timeSlotData.alternative)))) {
         if (timeSlotData.course) {
           const classElement = document.createElement('div');
           classElement.classList.add('class');
