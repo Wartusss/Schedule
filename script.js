@@ -395,13 +395,13 @@ const days = document.querySelectorAll('.day');
 const scheduleContent = document.querySelectorAll('.schedule-content');
 const today = new Date().getDay();
 let currentDay = '';
-let currentWeek = 'upper'; // Set the default week to upper
-let isAlternativeMode = false; // Added mode flag
+let currentWeek = 'upper';
+let isAlternativeMode = false;
 const lessonTimes = ["13:05", "14:40", "16:20", "17:55"];
 
 function displaySchedule(day) {
   scheduleContent.forEach(content => {
-    content.innerHTML = ''; // Clear existing schedule
+    content.innerHTML = '';
   });
   const dayData = scheduleData[day];
   if (dayData) {
@@ -446,7 +446,6 @@ function displaySchedule(day) {
   }
 }
 
-// Add event listeners for day selection
 days.forEach(day => {
   day.addEventListener('click', () => {
     days.forEach(d => d.classList.remove('active'));
@@ -456,7 +455,6 @@ days.forEach(day => {
   });
 });
 
-// Add event listeners for week selection
 document.getElementById('upper-week').addEventListener('click', () => {
   currentWeek = 'upper';
   scheduleContent.forEach(content => content.innerHTML = '');
@@ -473,7 +471,6 @@ document.getElementById('lower-week').addEventListener('click', () => {
   document.getElementById('upper-week').classList.remove('active');
 });
 
-// Event listener for mode selection
 document.getElementById('normal-mode').addEventListener('click', () => {
   if (isAlternativeMode) {
     isAlternativeMode = false;
@@ -492,7 +489,6 @@ document.getElementById('alternative-mode').addEventListener('click', () => {
   }
 });
 
-// Function to reset active day
 const resetActiveDay = () => {
   days.forEach(d => d.classList.remove('active'));
 };
@@ -520,9 +516,14 @@ lowerWeekButton.addEventListener('click', () => {
   }
 });
 
-// Initialize schedule for today
-if (today !== 0) {
-  const currentDayElement = days[today - 1];
+if (today === 0) {
+  const currentDayElement = days[6]; // Sunday is at index 6
+  resetActiveDay();
+  currentDayElement.classList.add('active');
+  currentDay = currentDayElement.dataset.day;
+  displaySchedule(currentDay);
+} else {
+  const currentDayElement = days[today - 1]; // Adjust index for Monday being at 0
   resetActiveDay();
   currentDayElement.classList.add('active');
   currentDay = currentDayElement.dataset.day;
