@@ -13,7 +13,7 @@ const scheduleData = {
     {
       "time": "14:40",
       "week": "all",
-      "course": "Lection",
+      "course": "lection",
       "title": "Новітня Історія України",
       "teacher": "Вербовий О.Ф.",
       "location": "Онлайн",
@@ -23,7 +23,7 @@ const scheduleData = {
     {
       "time": "16:20",
       "week": "all",
-      "course": "Lection",
+      "course": "lection",
       "title": "Історія політики країн Заходу щодо України",
       "teacher": "Машевський О.П.",
       "location": "Онлайн",
@@ -33,7 +33,7 @@ const scheduleData = {
     {
       "time": "17:55",
       "week": "all",
-      "course": "Lection",
+      "course": "lection",
       "title": "Історія раннього Нового часу",
       "teacher": "Пількевич А. Л.",
       "location": "Онлайн",
@@ -54,7 +54,7 @@ const scheduleData = {
     {
       "time": "14:40",
       "week": "all",
-      "course": "Lection",
+      "course": "lection",
       "title": "Новітня Історія України",
       "teacher": "Вербовий О.Ф.",
       "location": "Онлайн",
@@ -64,7 +64,7 @@ const scheduleData = {
     {
       "time": "16:20",
       "week": "all",
-      "course": "Lection",
+      "course": "lection",
       "title": "Історичні витоки політичної культури американського суспільства",
       "teacher": "Корнієнко А.Ю.",
       "location": "Онлайн",
@@ -74,7 +74,7 @@ const scheduleData = {
     {
       "time": "17:55",
       "week": "all",
-      "course": "Lection",
+      "course": "lection",
       "title": "Історія раннього Нового часу",
       "teacher": "Пількевич А. Л.",
       "location": "Онлайн",
@@ -106,7 +106,7 @@ const scheduleData = {
     {
       "time": "16:20",
       "week": "all",
-      "course": "Seminar",
+      "course": "seminar",
       "title": "Історія раннього Нового часу",
       "teacher": "Грегуль А. Ю",
       "location": "453 аудиторія",
@@ -116,7 +116,7 @@ const scheduleData = {
     {
       "time": "17:55",
       "week": "all",
-      "course": "Seminar",
+      "course": "seminar",
       "title": "Історія Східної Європи та Росії",
       "teacher": "Гуменний С. Л.",
       "location": "438 аудиторія",
@@ -147,7 +147,7 @@ const scheduleData = {
     {
       "time": "16:20",
       "week": "all",
-      "course": "Seminar",
+      "course": "seminar",
       "title": "Історія раннього Нового часу",
       "teacher": "Грегуль А. Ю",
       "location": "453 аудиторія",
@@ -157,7 +157,7 @@ const scheduleData = {
     {
       "time": "17:55",
       "week": "all",
-      "course": "Seminar",
+      "course": "seminar",
       "title": "Історія Східної Європи та Росії",
       "teacher": "Гуменний С. Л.",
       "location": "438 аудиторія",
@@ -179,7 +179,7 @@ const scheduleData = {
     {
       "time": "14:40",
       "week": "all",
-      "course": "Lection",
+      "course": "lection",
       "title": "Історія Східної Європи та Росії",
       "teacher": "Мордвінцев В. М.",
       "location": "Онлайн; 10:00",
@@ -189,7 +189,7 @@ const scheduleData = {
     {
       "time": "16:20",
       "week": "all",
-      "course": "Seminar",
+      "course": "seminar",
       "title": "Історія політичного устрою країн Західної Європи ",
       "teacher": "Іванов О. Ф.",
       "location": "451 аудиторія",
@@ -220,7 +220,7 @@ const scheduleData = {
     {
       "time": "14:40",
       "week": "all",
-      "course": "Lection",
+      "course": "lection",
       "title": "Історія Східної Європи та Росії",
       "teacher": "Мордвінцев В. М.",
       "location": "Онлайн; 10:00",
@@ -230,7 +230,7 @@ const scheduleData = {
     {
       "time": "16:20",
       "week": "all",
-      "course": "Seminar",
+      "course": "seminar",
       "title": "Історія Канади",
       "teacher": "Сухобокова О.О.",
       "location": "448 аудиторія",
@@ -252,7 +252,7 @@ const scheduleData = {
     {
       "time": "13:05",
       "week": "lower",
-      "course": "Lection",
+      "course": "lection",
       "title": "Історія політичного устрою країн Західної Європи ",
       "teacher": "Іванов О. Ф.",
       "location": "451 аудиторія",
@@ -272,7 +272,7 @@ const scheduleData = {
     {
       "time": "14:40",
       "week": "upper",
-      "course": "Seminar",
+      "course": "seminar",
       "title": "Історія політики країн Заходу щодо України",
       "teacher": "Машевський О.П.",
       "location": "460 аудиторія",
@@ -282,7 +282,7 @@ const scheduleData = {
     {
       "time": "16:20",
       "week": "upper",
-      "course": "Seminar",
+      "course": "seminar",
       "title": "Новітня історія України",
       "teacher": "Шкабко С. І.",
       "location": "452 аудиторія",
@@ -303,7 +303,7 @@ const scheduleData = {
     {
       "time": "13:05",
       "week": "lower",
-      "course": "Lection",
+      "course": "lection",
       "title": "Історія Канади",
       "teacher": "Сухобокова О.О.",
       "location": "448 аудиторія",
@@ -313,8 +313,7 @@ const scheduleData = {
     {
       "time": "14:40",
       "week": "upper",
-      "course": "Seminar",
-      "course": "Seminar",
+      "course": "seminar",
       "title": "Історичні витоки політичної культури американського суспільства",
       "teacher": "Корнієнко А.Ю.",
       "location": "448 аудиторія",
@@ -324,7 +323,7 @@ const scheduleData = {
     {
       "time": "16:20",
       "week": "upper",
-      "course": "Seminar",
+      "course": "seminar",
       "title": "Новітня історія України",
       "teacher": "Шкабко С. І.",
       "location": "452 аудиторія",
@@ -357,7 +356,7 @@ const scheduleData = {
     {
       "time": "14:40",
       "week": "all",
-      "course": "Lection",
+      "course": "lection",
       "title": "Дисципліна вільного вибору",
       "teacher": "",
       "location": "Онлайн",
@@ -378,7 +377,7 @@ const scheduleData = {
     {
       "time": "14:40",
       "week": "all",
-      "course": "Lection",
+      "course": "lection",
       "title": "Дисципліна вільного вибору",
       "teacher": "",
       "location": "Онлайн",
