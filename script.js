@@ -68,7 +68,7 @@ const scheduleData = {
       "title": "Історичні витоки політичної культури американського суспільства",
       "teacher": "Корнієнко А.Ю.",
       "location": "Онлайн",
-      "additionalInfo": "https://us06web.zoom.us/j/87293187730?pwd=ZRmcbu2gX4CrXGJU4SnEHYQHuQknax.1Meeting ID: 872 9318 7730Passcode: 076338",
+      "additionalInfo": "https://us06web.zoom.us/j/87293187730?pwd=ZRmcbu2gX4CrXGJU4SnEHYQHuQknax.1Meeting ID: 872 9318 7730Passcode: 076338",
       "alternative": true
     },
     {
@@ -341,7 +341,7 @@ const scheduleData = {
       "additionalInfo": "",
       "alternative": true
     },
-    
+
   ],
   "friday": [
     {
@@ -385,7 +385,7 @@ const scheduleData = {
       "additionalInfo": "https://telegra.ph/Discipl%D1%96na-v%D1%96lnogo-viboru-studenta-03-08",
       "alternative": true
     },
-    
+
   ],
 
   };
@@ -446,6 +446,7 @@ function displaySchedule(day) {
   }
 }
 
+// Add event listeners for day selection
 days.forEach(day => {
   day.addEventListener('click', () => {
     days.forEach(d => d.classList.remove('active'));
@@ -455,6 +456,7 @@ days.forEach(day => {
   });
 });
 
+// Add event listeners for week selection
 document.getElementById('upper-week').addEventListener('click', () => {
   currentWeek = 'upper';
   scheduleContent.forEach(content => content.innerHTML = '');
@@ -471,7 +473,7 @@ document.getElementById('lower-week').addEventListener('click', () => {
   document.getElementById('upper-week').classList.remove('active');
 });
 
-
+// Event listener for mode selection
 document.getElementById('normal-mode').addEventListener('click', () => {
   if (isAlternativeMode) {
     isAlternativeMode = false;
@@ -490,7 +492,7 @@ document.getElementById('alternative-mode').addEventListener('click', () => {
   }
 });
 
-
+// Function to reset active day
 const resetActiveDay = () => {
   days.forEach(d => d.classList.remove('active'));
 };
@@ -518,7 +520,7 @@ lowerWeekButton.addEventListener('click', () => {
   }
 });
 
-// 
+// Initialize schedule for today
 if (today !== 0) {
   const currentDayElement = days[today - 1];
   resetActiveDay();
