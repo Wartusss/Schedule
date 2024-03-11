@@ -342,15 +342,15 @@ body {
 
   .mode-buttons {
     display: flex;
-    flex-direction: column; /* Change to column layout */
-    justify-content: flex-start; /* Align buttons to the start of the container */
-    align-items: stretch; /* Stretch buttons to fill the container */
-    width: 100%; /* Ensure buttons take up full width */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
   }
 
   .mode-buttons button {
     padding: 10px 20px;
-    margin-bottom: 10px; /* Add bottom margin for spacing */
+    margin-bottom: 10px;
     width: auto;
   }
 
