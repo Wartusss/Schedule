@@ -340,21 +340,21 @@ body {
     margin-bottom: 10px;
   }
 
-    .mode-buttons {
-      display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-    }
+  .mode-buttons {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
 
-    .mode-buttons button {
-      flex: 0 0 auto;
-      white-space: nowrap;
-      margin-right: 10px;
-    }
+  .mode-buttons button {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 
-    .mode-buttons button:last-child {
-      margin-right: 0;
-    }
+  .mode-buttons button:last-child {
+    margin-bottom: 0;
   }
 
   .controls > div {
