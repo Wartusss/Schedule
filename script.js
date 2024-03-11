@@ -408,27 +408,23 @@ let currentWeek = 'upper';
 let isAlternativeMode = false;
 const lessonTimes = ["13:05", "14:40", "16:20", "17:55"];
 
-// Function to check if the device is running on Android
-function isAndroid() {
-  return /Android/i.test(navigator.userAgent);
-}
-
-// Function to check if the device is running on iOS
-function isIOS() {
-  return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+// Function to detect if the webpage is loaded in a WebView
+function isWebView() {
+  // Check if the user agent contains "WebView"
+  return /(android.*chrome\/[.0-9]* (?!mobile)|; wv)/i.test(navigator.userAgent);
 }
 
 // Function to open links in browser
 function openInBrowser(url) {
-  if (isAndroid()) {
-    // For Android, use intent to open the link in the default browser
-    window.location.href = "intent://" + url.substring(url.indexOf("://") + 3) + "#Intent;scheme=" + url.substring(0, url.indexOf("://")) + ";package=com.android.chrome;end;";
-  } else if (isIOS()) {
-    // For iOS, use the window.open method
-    window.open(url, "_system");
+  // If loaded in a WebView, prompt the user to open in external browser
+  if (isWebView()) {
+    const confirmOpen = confirm("Це посилання відкриється в зовнішньому браузері. Продовжити?");
+    if (confirmOpen) {
+      window.open(url, '_system');
+    }
   } else {
-    // For other platforms, fallback to default behavior
-    window.open(url, "_blank");
+    // If not loaded in a WebView, open in the default browser
+    window.open(url, '_blank');
   }
 }
 
@@ -469,15 +465,10 @@ function displaySchedule(day) {
           });
 
           if (timeSlotData.additionalInfo && timeSlotData.additionalInfo.includes('https')) {
-            const additionalInfo = document.createElement('a');
+            const additionalInfo = document.createElement('button');
             additionalInfo.textContent = 'Посилання';
             additionalInfo.classList.add('additional-info-button');
-            additionalInfo.href = timeSlotData.additionalInfo;
-            additionalInfo.target = '_blank'; // Open link in new window/tab
-            additionalInfo.addEventListener('click', (event) => {
-              event.preventDefault(); // Prevent default action of opening in WebView
-              openInBrowser(timeSlotData.additionalInfo);
-            });
+            additionalInfo.addEventListener('click', () => openInBrowser(timeSlotData.additionalInfo));
             classElement.appendChild(additionalInfo);
           }
           scheduleContent.forEach((content, index) => {
