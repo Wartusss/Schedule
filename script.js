@@ -408,14 +408,29 @@ let currentWeek = 'upper';
 let isAlternativeMode = false;
 const lessonTimes = ["13:05", "14:40", "16:20", "17:55"];
 
-const links = document.querySelectorAll('a');
-links.forEach(link => {
-  link.addEventListener('click', function(event) {
-    event.preventDefault();
-    const url = this.getAttribute('href');
-    window.open(url, '_blank');
-  });
-});
+// Function to check if the device is running on Android
+function isAndroid() {
+  return /Android/i.test(navigator.userAgent);
+}
+
+// Function to check if the device is running on iOS
+function isIOS() {
+  return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
+
+// Function to open links in browser
+function openInBrowser(url) {
+  if (isAndroid()) {
+    // For Android, use intent to open the link in the default browser
+    window.location.href = "intent://" + url.substring(url.indexOf("://") + 3) + "#Intent;scheme=" + url.substring(0, url.indexOf("://")) + ";package=com.android.chrome;end;";
+  } else if (isIOS()) {
+    // For iOS, use the window.open method
+    window.open(url, "_system");
+  } else {
+    // For other platforms, fallback to default behavior
+    window.open(url, "_blank");
+  }
+}
 
 function displaySchedule(day) {
   scheduleContent.forEach(content => {
@@ -457,7 +472,7 @@ function displaySchedule(day) {
             const additionalInfo = document.createElement('button');
             additionalInfo.textContent = 'Посилання';
             additionalInfo.classList.add('additional-info-button');
-            additionalInfo.addEventListener('click', () => window.open(timeSlotData.additionalInfo, '_blank'));
+            additionalInfo.addEventListener('click', () => openInBrowser(timeSlotData.additionalInfo));
             classElement.appendChild(additionalInfo);
           }
           scheduleContent.forEach((content, index) => {
