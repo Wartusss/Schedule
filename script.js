@@ -408,15 +408,6 @@ let currentWeek = 'upper';
 let isAlternativeMode = false;
 const lessonTimes = ["13:05", "14:40", "16:20", "17:55"];
 
-const links = document.querySelectorAll('a');
-links.forEach(link => {
-  link.addEventListener('click', function(event) {
-    event.preventDefault();
-    const url = this.getAttribute('href');
-    window.open(url, '_blank');
-  });
-});
-
 function displaySchedule(day) {
   scheduleContent.forEach(content => {
     content.innerHTML = '';
