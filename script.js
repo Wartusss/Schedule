@@ -408,13 +408,10 @@ let currentWeek = 'upper';
 let isAlternativeMode = false;
 const lessonTimes = ["13:05", "14:40", "16:20", "17:55"];
 
-// Function to open links in the default browser
 function openInDefaultBrowser(url) {
     if (window.location.href.startsWith('file://')) {
-        // If the WebView is running locally, use window.open to open links in the default browser
         window.open(url, '_system');
     } else {
-        // Otherwise, use the WebView's navigation
         window.location.href = url;
     }
 }
