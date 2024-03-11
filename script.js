@@ -408,25 +408,14 @@ let currentWeek = 'upper';
 let isAlternativeMode = false;
 const lessonTimes = ["13:05", "14:40", "16:20", "17:55"];
 
-// Function to detect if the webpage is loaded in a WebView
-function isWebView() {
-  // Check if the user agent contains "WebView"
-  return /(android.*chrome\/[.0-9]* (?!mobile)|; wv)/i.test(navigator.userAgent);
-}
-
-// Function to open links in browser
-function openInBrowser(url) {
-  // If loaded in a WebView, prompt the user to open in external browser
-  if (isWebView()) {
-    const confirmOpen = confirm("Це посилання відкриється в зовнішньому браузері. Продовжити?");
-    if (confirmOpen) {
-      window.open(url, '_system');
-    }
-  } else {
-    // If not loaded in a WebView, open in the default browser
+const links = document.querySelectorAll('a');
+links.forEach(link => {
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
+    const url = this.getAttribute('href');
     window.open(url, '_blank');
-  }
-}
+  });
+});
 
 function displaySchedule(day) {
   scheduleContent.forEach(content => {
@@ -468,7 +457,7 @@ function displaySchedule(day) {
             const additionalInfo = document.createElement('button');
             additionalInfo.textContent = 'Посилання';
             additionalInfo.classList.add('additional-info-button');
-            additionalInfo.addEventListener('click', () => openInBrowser(timeSlotData.additionalInfo));
+            additionalInfo.addEventListener('click', () => window.open(timeSlotData.additionalInfo, '_blank'));
             classElement.appendChild(additionalInfo);
           }
           scheduleContent.forEach((content, index) => {
