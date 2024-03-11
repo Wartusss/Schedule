@@ -408,6 +408,15 @@ let currentWeek = 'upper';
 let isAlternativeMode = false;
 const lessonTimes = ["13:05", "14:40", "16:20", "17:55"];
 
+const links = document.querySelectorAll('a');
+links.forEach(link => {
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
+    const url = this.getAttribute('href');
+    window.open(url, '_blank');
+  });
+});
+
 function displaySchedule(day) {
   scheduleContent.forEach(content => {
     content.innerHTML = '';
@@ -544,19 +553,4 @@ if (today === 0) {
   currentDayElement.classList.add('active');
   currentDay = currentDayElement.dataset.day;
   displaySchedule(currentDay);
-}
-
-if (navigator.userAgent.includes('FBAN') || navigator.userAgent.includes('FBAV')) {
-  const links = document.querySelectorAll('a[href^="https"]');
-  links.forEach(link => {
-    link.setAttribute('target', '_blank');
-  });
-} else {
-  const links = document.querySelectorAll('a[href^="https"]');
-  links.forEach(link => {
-    link.addEventListener('click', function(event) {
-      event.preventDefault();
-      window.open(link.getAttribute('href'));
-    });
-  });
 }
