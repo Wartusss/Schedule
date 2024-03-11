@@ -342,15 +342,16 @@ body {
 
   .mode-buttons {
     display: flex;
-    flex-direction: column;
-    width: auto;
+    flex-direction: column; /* Change to column layout */
+    justify-content: flex-start; /* Align buttons to the start of the container */
+    align-items: stretch; /* Stretch buttons to fill the container */
+    width: 100%; /* Ensure buttons take up full width */
   }
 
   .mode-buttons button {
-    flex: 0 0 auto;
-    white-space: nowrap;
-    margin-right: 0;
-    margin-bottom: 10px;
+    padding: 10px 20px;
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+    width: auto;
   }
 
   .mode-buttons button:last-child {
@@ -369,4 +370,13 @@ body {
     margin-right: 0;
     margin-bottom: 10px;
   }
+}
+
+@media (max-width: 400px) {
+  #upper-week,
+  #lower-week {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
 }
