@@ -532,6 +532,22 @@ lowerWeekButton.addEventListener('click', () => {
   }
 });
 
+window.addEventListener('DOMContentLoaded', (event) => {
+    const links = document.querySelectorAll('a');
+    
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            if (navigator.userAgent.includes('iPhone') || navigator.userAgent.includes('Android')) {
+                window.open(link.href, '_system');
+            } else {
+                window.open(link.href, '_blank');
+            }
+        });
+    });
+});
+
 if (today === 0) {
   const currentDayElement = days[6];
   resetActiveDay();
