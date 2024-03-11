@@ -408,67 +408,77 @@ let currentWeek = 'upper';
 let isAlternativeMode = false;
 const lessonTimes = ["13:05", "14:40", "16:20", "17:55"];
 
+// Function to open links in the default browser
+function openInDefaultBrowser(url) {
+    if (window.location.href.startsWith('file://')) {
+        // If the WebView is running locally, use window.open to open links in the default browser
+        window.open(url, '_system');
+    } else {
+        // Otherwise, use the WebView's navigation
+        window.location.href = url;
+    }
+}
+
 function displaySchedule(day) {
-  scheduleContent.forEach(content => {
-    content.innerHTML = '';
-  });
-  const dayData = scheduleData[day];
-  if (dayData) {
-    dayData.forEach(timeSlotData => {
-      if ((day !== 'sunday' && day !== 'saturday') && ((timeSlotData.week === 'all' || timeSlotData.week === currentWeek) && 
-          ((!isAlternativeMode && !timeSlotData.alternative) || (isAlternativeMode && timeSlotData.alternative)))) {
-        if (timeSlotData.course) {
-          const classElement = document.createElement('div');
-          classElement.classList.add('class');
-          const courseTitle = document.createElement('strong');
-          courseTitle.textContent = courseNames[timeSlotData.course];
-          courseTitle.dataset.course = timeSlotData.course;
-          classElement.appendChild(courseTitle);
-          const title = document.createElement('p');
-          const titleText = document.createElement('span');
-          titleText.textContent = timeSlotData.title;
-          title.appendChild(titleText);
-          titleText.style.fontWeight = 'bold';
-          classElement.appendChild(title);
-
-          Object.keys(parameterIcons).forEach(parameter => {
-            if (timeSlotData[parameter]) {
-              const icon = document.createElement('span');
-              icon.innerHTML = parameterIcons[parameter];
-              const parameterValue = document.createElement('span');
-              parameterValue.textContent = timeSlotData[parameter];
-              const parameterElement = document.createElement('p');
-              parameterElement.appendChild(icon);
-              parameterElement.appendChild(parameterValue);
-              classElement.appendChild(parameterElement);
-            }
-          });
-
-          if (timeSlotData.additionalInfo && timeSlotData.additionalInfo.includes('https')) {
-            const additionalInfo = document.createElement('button');
-            additionalInfo.textContent = 'Посилання';
-            additionalInfo.classList.add('additional-info-button');
-            additionalInfo.addEventListener('click', () => window.open(timeSlotData.additionalInfo, '_blank'));
-            classElement.appendChild(additionalInfo);
-          }
-          scheduleContent.forEach((content, index) => {
-            if (lessonTimes[index] === timeSlotData.time) {
-              content.appendChild(classElement);
-            }
-          });
-        }
-      }
+    scheduleContent.forEach(content => {
+        content.innerHTML = '';
     });
-  }
+    const dayData = scheduleData[day];
+    if (dayData) {
+        dayData.forEach(timeSlotData => {
+            if ((day !== 'sunday' && day !== 'saturday') && ((timeSlotData.week === 'all' || timeSlotData.week === currentWeek) && ((!isAlternativeMode && !timeSlotData.alternative) || (isAlternativeMode && timeSlotData.alternative)))) {
+                if (timeSlotData.course) {
+                    const classElement = document.createElement('div');
+                    classElement.classList.add('class');
+                    const courseTitle = document.createElement('strong');
+                    courseTitle.textContent = courseNames[timeSlotData.course];
+                    courseTitle.dataset.course = timeSlotData.course;
+                    classElement.appendChild(courseTitle);
+                    const title = document.createElement('p');
+                    const titleText = document.createElement('span');
+                    titleText.textContent = timeSlotData.title;
+                    title.appendChild(titleText);
+                    titleText.style.fontWeight = 'bold';
+                    classElement.appendChild(title);
+
+                    Object.keys(parameterIcons).forEach(parameter => {
+                        if (timeSlotData[parameter]) {
+                            const icon = document.createElement('span');
+                            icon.innerHTML = parameterIcons[parameter];
+                            const parameterValue = document.createElement('span');
+                            parameterValue.textContent = timeSlotData[parameter];
+                            const parameterElement = document.createElement('p');
+                            parameterElement.appendChild(icon);
+                            parameterElement.appendChild(parameterValue);
+                            classElement.appendChild(parameterElement);
+                        }
+                    });
+
+                    if (timeSlotData.additionalInfo && timeSlotData.additionalInfo.includes('https')) {
+                        const additionalInfo = document.createElement('button');
+                        additionalInfo.textContent = 'Посилання';
+                        additionalInfo.classList.add('additional-info-button');
+                        additionalInfo.addEventListener('click', () => openInDefaultBrowser(timeSlotData.additionalInfo));
+                        classElement.appendChild(additionalInfo);
+                    }
+                    scheduleContent.forEach((content, index) => {
+                        if (lessonTimes[index] === timeSlotData.time) {
+                            content.appendChild(classElement);
+                        }
+                    });
+                }
+            }
+        });
+    }
 }
 
 days.forEach(day => {
-  day.addEventListener('click', () => {
-    days.forEach(d => d.classList.remove('active'));
-    day.classList.add('active');
-    currentDay = day.dataset.day;
-    displaySchedule(currentDay);
-  });
+    day.addEventListener('click', () => {
+        days.forEach(d => d.classList.remove('active'));
+        day.classList.add('active');
+        currentDay = day.dataset.day;
+        displaySchedule(currentDay);
+    });
 });
 
 document.getElementById('upper-week').addEventListener('click', () => {
