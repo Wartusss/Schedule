@@ -400,12 +400,6 @@ const courseNames = {
   "language": "Мова"
 };
 
-if (navigator.userAgent.includes('FBAN') || navigator.userAgent.includes('FBAV')) {
-  var isWebView = true;
-} else {
-  var isWebView = false;
-}
-
 const days = document.querySelectorAll('.day');
 const scheduleContent = document.querySelectorAll('.schedule-content');
 const today = new Date().getDay();
@@ -550,4 +544,19 @@ if (today === 0) {
   currentDayElement.classList.add('active');
   currentDay = currentDayElement.dataset.day;
   displaySchedule(currentDay);
+}
+
+if (navigator.userAgent.includes('FBAN') || navigator.userAgent.includes('FBAV')) {
+  const links = document.querySelectorAll('a[href^="https"]');
+  links.forEach(link => {
+    link.setAttribute('target', '_blank');
+  });
+} else {
+  const links = document.querySelectorAll('a[href^="https"]');
+  links.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      window.open(link.getAttribute('href'));
+    });
+  });
 }
