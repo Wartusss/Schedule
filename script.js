@@ -469,10 +469,15 @@ function displaySchedule(day) {
           });
 
           if (timeSlotData.additionalInfo && timeSlotData.additionalInfo.includes('https')) {
-            const additionalInfo = document.createElement('button');
+            const additionalInfo = document.createElement('a');
             additionalInfo.textContent = 'Посилання';
             additionalInfo.classList.add('additional-info-button');
-            additionalInfo.addEventListener('click', () => openInBrowser(timeSlotData.additionalInfo));
+            additionalInfo.href = timeSlotData.additionalInfo;
+            additionalInfo.target = '_blank'; // Open link in new window/tab
+            additionalInfo.addEventListener('click', (event) => {
+              event.preventDefault(); // Prevent default action of opening in WebView
+              openInBrowser(timeSlotData.additionalInfo);
+            });
             classElement.appendChild(additionalInfo);
           }
           scheduleContent.forEach((content, index) => {
