@@ -20,21 +20,14 @@ body {
 .controls {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
-}
-
-.controls-large button,
-.controls-small button {
-  margin-bottom: 20px;
+  align-items: flex-end;
 }
 
 .controls > div {
-  flex: 1;
   margin-right: 10px;
 }
 
-.controls-large button,
-.controls-small button {
+.controls button {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -45,15 +38,14 @@ body {
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
-.controls-large button:hover,
-.controls-small button:hover {
+.controls button:hover {
   background-color: #45a049;
 }
 
-.controls-large button.active,
-.controls-small button.active {
+.controls button.active {
   background-color: #4CAF50;
   color: #fff;
 }
@@ -100,8 +92,8 @@ body {
 
 .time-bar {
   width: 50px;
-  background-color: #ecf0f1;
-  color: #444;
+  background-color: #3498db;
+  color: #fff;
   padding: 10px;
   border-radius: 5px;
   margin-left: 15px;
@@ -112,6 +104,37 @@ body {
   font-size: 12px;
   font-weight: bold;
 }
+
+.time-bar-block {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+}
+
+.time-bar-block .time-bar {
+  width: 80px;
+  background-color: #ecf0f1;
+  color: #444;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.time-bar-block .schedule-content {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 25px;
+  overflow-x: auto;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
 
 .time-slot {
   text-align: center;
@@ -129,6 +152,7 @@ body {
   font-size: 14px;
   line-height: 1.2;
   margin-left: 15px;
+  margin-top: 10px;
 }
 
 .schedule .class {
@@ -207,7 +231,17 @@ body {
   color: #fff;
 }
 
-#upper-week,
+#upper-week {
+  width: 150px;
+  margin-right: 5px;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
 #lower-week {
   width: 150px;
   background-color: #f0f0f0;
@@ -218,8 +252,9 @@ body {
   box-sizing: border-box;
 }
 
+#upper-week,
 #lower-week {
-  padding: 10px 20px;
+  margin-right: 0;
 }
 
 #upper-week.active,
@@ -232,6 +267,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 300px;
+  margin-bottom: 20px;
 }
 
 .mode-buttons button {
@@ -342,18 +378,23 @@ body {
 
   .mode-buttons {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
+    justify-content: space-between;
     width: 100%;
+    margin-bottom: 20px;
   }
 
   .mode-buttons button {
-    padding: 10px 20px;
-    margin-bottom: 10px;
-    width: auto;
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+    height: 100%;
   }
-
   .mode-buttons button:last-child {
     margin-bottom: 0;
   }
@@ -370,13 +411,29 @@ body {
     margin-right: 0;
     margin-bottom: 10px;
   }
+  .controls > div {
+    flex-basis: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .controls button {
+    width: 100%;
+  }
+  
 }
 
 @media (max-width: 400px) {
   #upper-week,
   #lower-week {
     width: 100%;
+    margin-right: 0;
     margin-bottom: 10px;
   }
 }
+
+@media (min-width: 769px) {
+  .controls {
+    justify-content: flex-start;
+  }
 }
