@@ -153,6 +153,7 @@ body {
   line-height: 1.2;
   margin-left: 15px;
   margin-top: 10px;
+  flex-wrap: wrap;
 }
 
 .schedule .class {
@@ -163,6 +164,7 @@ body {
   margin-bottom: 10px;
   transition: box-shadow 0.2s ease;
   cursor: pointer;
+  flex-wrap: wrap;
 }
 
 .schedule .class:hover {
@@ -182,6 +184,7 @@ body {
   color: #fff;
   cursor: pointer;
   transition: all 0.2s ease;
+  flex-wrap: wrap;
 }
 
 .schedule .class strong[data-course="lection"] {
@@ -204,6 +207,8 @@ body {
 .schedule .class strong {
   display: block !important;
   margin-bottom: 5px;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 .schedule .class i {
@@ -420,7 +425,7 @@ body {
   .controls button {
     width: 100%;
   }
-  
+
 }
 
 @media (max-width: 400px) {
@@ -433,6 +438,20 @@ body {
 }
 
 @media (min-width: 769px) {
+  .schedule {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .schedule .class {
+    flex-basis: calc(50% - 20px);
+    margin-right: 20px;
+  }
+
+  .schedule .class:nth-child(odd) {
+    margin-right: 0;
+  }
   .controls {
     justify-content: flex-start;
   }
