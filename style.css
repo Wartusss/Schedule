@@ -111,7 +111,7 @@ body {
   display: flex;
 }
 .time-bar-block .time-bar {
-  width: 30px; /* Reduce the width of time-bar */
+  width: 30px;
   background-color: #ecf0f1;
   color: #444;
   padding: 10px;
