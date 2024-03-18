@@ -91,7 +91,7 @@ body {
 }
 
 .time-bar {
-  width: 50px;
+  width: 30px;
   background-color: #3498db;
   color: #fff;
   padding: 10px;
@@ -110,9 +110,8 @@ body {
   margin-top: 20px;
   display: flex;
 }
-
 .time-bar-block .time-bar {
-  width: 80px;
+  width: 30px; /* Reduce the width of time-bar */
   background-color: #ecf0f1;
   color: #444;
   padding: 10px;
@@ -145,7 +144,7 @@ body {
 .schedule-content {
   flex: 1;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 5px;
   padding: 25px;
   max-width: 100%;
   overflow-x: auto;
@@ -454,5 +453,11 @@ body {
   }
   .controls {
     justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .mode-buttons button#alternative-mode {
+    padding: 8px;
   }
 }
