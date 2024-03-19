@@ -407,6 +407,22 @@ let currentDay = '';
 let currentWeek = 'upper';
 let isAlternativeMode = false;
 const lessonTimes = ["13:05", "14:40", "16:20", "17:55"];
+const switchBtn = document.getElementById('switch');
+const nightElements = document.querySelectorAll('.container, body');
+
+switchBtn.addEventListener('change', function() {
+  if (this.checked) {
+    // Switch to night mode
+    nightElements.forEach(element => {
+      element.classList.add('night');
+    });
+  } else {
+    // Switch to day mode
+    nightElements.forEach(element => {
+      element.classList.remove('night');
+    });
+  }
+});
 
 function openInDefaultBrowser(url) {
     if (window.location.href.startsWith('file://')) {
@@ -415,7 +431,6 @@ function openInDefaultBrowser(url) {
         window.location.href = url;
     }
 }
-
 function displaySchedule(day) {
     scheduleContent.forEach(content => {
         content.innerHTML = '';
@@ -437,7 +452,6 @@ function displaySchedule(day) {
                     title.appendChild(titleText);
                     titleText.style.fontWeight = 'bold';
                     classElement.appendChild(title);
-
                     Object.keys(parameterIcons).forEach(parameter => {
                       if (timeSlotData[parameter]) {
                           const icon = document.createElement('span');
@@ -453,7 +467,6 @@ function displaySchedule(day) {
                           classElement.appendChild(parameterElement);
                       }
                     });
-
                     if (timeSlotData.additionalInfo && timeSlotData.additionalInfo.includes('https')) {
                         const additionalInfo = document.createElement('button');
                         additionalInfo.textContent = 'Посилання';
@@ -472,7 +485,6 @@ function displaySchedule(day) {
         });
     }
 }
-
 days.forEach(day => {
     day.addEventListener('click', () => {
         days.forEach(d => d.classList.remove('active'));
@@ -481,7 +493,6 @@ days.forEach(day => {
         displaySchedule(currentDay);
     });
 });
-
 document.getElementById('upper-week').addEventListener('click', () => {
   currentWeek = 'upper';
   scheduleContent.forEach(content => content.innerHTML = '');
@@ -489,7 +500,6 @@ document.getElementById('upper-week').addEventListener('click', () => {
   document.getElementById('upper-week').classList.add('active');
   document.getElementById('lower-week').classList.remove('active');
 });
-
 document.getElementById('lower-week').addEventListener('click', () => {
   currentWeek = 'lower';
   scheduleContent.forEach(content => content.innerHTML = '');
@@ -497,7 +507,6 @@ document.getElementById('lower-week').addEventListener('click', () => {
   document.getElementById('lower-week').classList.add('active');
   document.getElementById('upper-week').classList.remove('active');
 });
-
 document.getElementById('normal-mode').addEventListener('click', () => {
   if (isAlternativeMode) {
     isAlternativeMode = false;
@@ -506,8 +515,6 @@ document.getElementById('normal-mode').addEventListener('click', () => {
     document.getElementById('alternative-mode').classList.remove('active');
   }
 });
-
-
 document.getElementById('alternative-mode').addEventListener('click', () => {
   if (!isAlternativeMode) {
     isAlternativeMode = true;
@@ -516,14 +523,11 @@ document.getElementById('alternative-mode').addEventListener('click', () => {
     document.getElementById('normal-mode').classList.remove('active');
   }
 });
-
 const resetActiveDay = () => {
   days.forEach(d => d.classList.remove('active'));
 };
-
 const upperWeekButton = document.getElementById('upper-week');
 const lowerWeekButton = document.getElementById('lower-week');
-
 upperWeekButton.addEventListener('click', () => {
   if (currentWeek !== 'upper') {
     currentWeek = 'upper';
@@ -533,7 +537,6 @@ upperWeekButton.addEventListener('click', () => {
     lowerWeekButton.classList.remove('active');
   }
 });
-
 lowerWeekButton.addEventListener('click', () => {
   if (currentWeek !== 'lower') {
     currentWeek = 'lower';
@@ -546,11 +549,9 @@ lowerWeekButton.addEventListener('click', () => {
 
 window.addEventListener('DOMContentLoaded', (event) => {
     const links = document.querySelectorAll('a');
-
     links.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-
             if (navigator.userAgent.includes('iPhone') || navigator.userAgent.includes('Android')) {
                 window.open(link.href, '_system');
             } else {
