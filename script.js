@@ -15,7 +15,7 @@ const scheduleData = {
       "week": "all",
       "course": "lection",
       "title": "Новітня Історія України",
-      "teacher": "Вербовий О.Ф.",
+      "teacher": "Вербовий О. Ф.",
       "location": "Онлайн",
       "additionalInfo": "https://meet.google.com/yao-yrwr-heg",
       "alternative": false
@@ -25,7 +25,7 @@ const scheduleData = {
       "week": "all",
       "course": "lection",
       "title": "Історія політики країн Заходу щодо України",
-      "teacher": "Машевський О.П.",
+      "teacher": "Машевський О. П.",
       "location": "Онлайн",
       "additionalInfo": "https://knu-ua.zoom.us/j/88035974768?pwd=NWxnZll2YkxiWkowaTZ3Y0lqVTZhdz09",
       "alternative": false
@@ -56,7 +56,7 @@ const scheduleData = {
       "week": "all",
       "course": "lection",
       "title": "Новітня Історія України",
-      "teacher": "Вербовий О.Ф.",
+      "teacher": "Вербовий О. Ф.",
       "location": "Онлайн",
       "additionalInfo": "https://meet.google.com/yao-yrwr-heg",
       "alternative": true
@@ -66,7 +66,7 @@ const scheduleData = {
       "week": "all",
       "course": "lection",
       "title": "Історичні витоки політичної культури американського суспільства",
-      "teacher": "Корнієнко А.Ю.",
+      "teacher": "Корнієнко А. Ю.",
       "location": "Онлайн",
       "additionalInfo": "https://us06web.zoom.us/j/87293187730?pwd=ZRmcbu2gX4CrXGJU4SnEHYQHuQknax.1Meeting ID: 872 9318 7730Passcode: 076338",
       "alternative": true
@@ -98,7 +98,7 @@ const scheduleData = {
       "week": "all",
       "course": "language",
       "title": "Англійська / Французька / Німецька / Іспанська",
-      "teacher": "Шевченко О.Ф / Рижова І.А. / Симканич О.В. / Невинна Ю.П.",
+      "teacher": "Шевченко О. Ф. / Рижова І. А. / Симканич О. В. / Невинна Ю. П.",
       "location": "153 / 456 / Онлайн / 452 ауд.",
       "additionalInfo": "",
       "alternative": false
@@ -108,7 +108,7 @@ const scheduleData = {
       "week": "all",
       "course": "seminar",
       "title": "Історія раннього Нового часу",
-      "teacher": "Грегуль А. Ю",
+      "teacher": "Грегуль А. Ю.",
       "location": "453 аудиторія",
       "additionalInfo": "",
       "alternative": false
@@ -139,7 +139,7 @@ const scheduleData = {
       "week": "all",
       "course": "language",
       "title": "Англійська / Французька / Німецька / Іспанська",
-      "teacher": "Шевченко О.Ф / Рижова І.А. / Симканич О.В. / Невинна Ю.П.",
+      "teacher": "Шевченко О. Ф. / Рижова І. А. / Симканич О. В. / Невинна Ю. П.",
       "location": "153 / 456 / Онлайн / 452 ауд.",
       "additionalInfo": "",
       "alternative": true
@@ -149,7 +149,7 @@ const scheduleData = {
       "week": "all",
       "course": "seminar",
       "title": "Історія раннього Нового часу",
-      "teacher": "Грегуль А. Ю",
+      "teacher": "Грегуль А. Ю.",
       "location": "453 аудиторія",
       "additionalInfo": "",
       "alternative": true
@@ -201,7 +201,7 @@ const scheduleData = {
       "week": "all",
       "course": "language",
       "title": "Англійська / Французька / Німецька / Іспанська",
-      "teacher": "Шевченко О.Ф / Рижова І.А. / Симканич О.В. / Невинна Ю.П.",
+      "teacher": "Шевченко О. Ф. / Рижова І. А./ Симканич О. В. / Невинна Ю. П.",
       "location": "153 / 456 / Онлайн / 452 ауд.",
       "additionalInfo": "",
       "alternative": false
@@ -232,7 +232,7 @@ const scheduleData = {
       "week": "all",
       "course": "seminar",
       "title": "Історія Канади",
-      "teacher": "Сухобокова О.О.",
+      "teacher": "Сухобокова О. О.",
       "location": "448 аудиторія",
       "additionalInfo": "",
       "alternative": true
@@ -242,7 +242,7 @@ const scheduleData = {
       "week": "all",
       "course": "language",
       "title": "Англійська / Французька / Німецька / Іспанська",
-      "teacher": "Шевченко О.Ф / Рижова І.А. / Симканич О.В. / Невинна Ю.П.",
+      "teacher": "Шевченко О. Ф. / Рижова І. А. / Симканич О.В. / Невинна Ю. П.",
       "location": "153 / 456 / Онлайн / 452 ауд.",
       "additionalInfo": "",
       "alternative": true
@@ -274,7 +274,7 @@ const scheduleData = {
       "week": "upper",
       "course": "seminar",
       "title": "Історія політики країн Заходу щодо України",
-      "teacher": "Машевський О.П.",
+      "teacher": "Машевський О. П.",
       "location": "460 аудиторія",
       "additionalInfo": "",
       "alternative": false
@@ -294,7 +294,7 @@ const scheduleData = {
       "week": "all",
       "course": "language",
       "title": "Англійська / Французька / Німецька / Іспанська",
-      "teacher": "Шевченко О.Ф / Рижова І.А. / Симканич О.В. / Невинна Ю.П.",
+      "teacher": "Шевченко О. Ф. / Рижова І. А. / Симканич О. В. / Невинна Ю. П.",
       "location": "153 / 456 / Онлайн / 452 ауд.",
       "additionalInfo": "",
       "alternative": false
@@ -305,7 +305,7 @@ const scheduleData = {
       "week": "lower",
       "course": "lection",
       "title": "Історія Канади",
-      "teacher": "Сухобокова О.О.",
+      "teacher": "Сухобокова О. О.",
       "location": "448 аудиторія",
       "additionalInfo": "",
       "alternative": true
@@ -315,7 +315,7 @@ const scheduleData = {
       "week": "upper",
       "course": "seminar",
       "title": "Історичні витоки політичної культури американського суспільства",
-      "teacher": "Корнієнко А.Ю.",
+      "teacher": "Корнієнко А. Ю.",
       "location": "448 аудиторія",
       "additionalInfo": "",
       "alternative": true
@@ -335,7 +335,7 @@ const scheduleData = {
       "week": "all",
       "course": "language",
       "title": "Англійська / Французька / Німецька / Іспанська",
-      "teacher": "Шевченко О.Ф / Рижова І.А. / Симканич О.В. / Невинна Ю.П.",
+      "teacher": "Шевченко О. Ф. / Рижова І. А. / Симканич О. В. / Невинна Ю. П.",
       "location": "153 / 456 / Онлайн / 452 ауд.",
       "additionalInfo": "",
       "alternative": true
