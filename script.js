@@ -255,7 +255,7 @@ const scheduleData = {
       "course": "lection",
       "title": "Історія політичного устрою країн Західної Європи ",
       "teacher": "Іванов О. Ф.",
-      "location": "451 аудиторія",
+      "location": "460 аудиторія",
       "additionalInfo": "",
       "alternative": false
     },
