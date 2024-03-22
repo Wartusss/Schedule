@@ -1,4 +1,3 @@
-
 body {
   background-color: #f0f4f8;
   color: #444;
@@ -233,10 +232,6 @@ body {
 
 .schedule .class strong[data-course="language"] {
   background-color: #f39c12;
-}
-
-.schedule .class strong:hover {
-  background-color: #2980b9;
 }
 
 .schedule .class p,
@@ -674,10 +669,6 @@ input:checked + .slider:before {
 
 .night .schedule .class strong[data-course="language"] {
  background-color: #bc711a;
-}
-
-.night .schedule .class strong:hover {
- background-color: #1775ad;
 }
 
 .night .schedule .class i {
