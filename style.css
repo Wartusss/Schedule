@@ -1,3 +1,4 @@
+
 body {
   background-color: #f0f4f8;
   color: #444;
@@ -11,6 +12,16 @@ body {
 .container {
   max-width: 100%;
   margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 15px;
+}
+
+.days-schedule-container {
+  max-width: 100%;
+  margin: 15px auto 0;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -113,11 +124,13 @@ body {
   font-weight: bold;
 }
 
+
 .time-bar-block {
   position: relative;
   margin-top: 20px;
   display: flex;
 }
+
 .time-bar-block .time-bar {
   width: 30px;
   background-color: #ecf0f1;
@@ -132,6 +145,27 @@ body {
   font-weight: bold;
 }
 
+.current-time .time-bar {
+  width: 30px;
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 0;
+}
+
+.time-slot {
+  text-align: center;
+  padding: 2px 0;
+  margin-top: 5px;
+}
+
 .time-bar-block .schedule-content {
   flex: 1;
   border: 1px solid #ddd;
@@ -140,13 +174,7 @@ body {
   overflow-x: auto;
   font-size: 14px;
   line-height: 1.2;
-}
-
-
-.time-slot {
-  text-align: center;
-  padding: 2px 0;
-  margin-top: 5px;
+  display: none;
 }
 
 .schedule-content {
@@ -161,6 +189,7 @@ body {
   margin-left: 15px;
   margin-top: 10px;
   flex-wrap: wrap;
+  display: none;
 }
 
 .schedule .class {
@@ -345,6 +374,11 @@ body {
   margin-left: 5px;
 }
 @media (max-width: 768px) {
+  .schedule .class strong,
+  .schedule .class p {
+    white-space: normal;
+  }
+
   .schedule {
     display: flex;
     flex-direction: column;
@@ -398,7 +432,7 @@ body {
     width: 100%;
     margin-bottom: 20px;
   }
-  
+
   .mode-buttons button {
     flex: 1;
     padding: 10px;
@@ -436,7 +470,6 @@ body {
   .controls button {
     width: 100%;
   }
-
 }
 
 #upper-week:not(.active),
@@ -444,6 +477,14 @@ body {
 #normal-mode:not(.active),
 #alternative-mode:not(.active) {
   background-color: #f0f4f8;
+  color: #000000;
+}
+
+#upper-week:not(.active):hover,
+#lower-week:not(.active):hover,
+#normal-mode:not(.active):hover,
+#alternative-mode:not(.active):hover {
+  background-color: #d9d9d9;
   color: #000000;
 }
 
@@ -457,6 +498,11 @@ body {
 }
 
 @media (min-width: 769px) {
+  .schedule .class strong,
+  .schedule .class p {
+    white-space: nowrap;
+  }
+
   .schedule {
     display: flex;
     flex-wrap: nowrap;
@@ -471,6 +517,7 @@ body {
   .schedule .class:nth-child(odd) {
     margin-right: 0;
   }
+
   .controls {
     justify-content: flex-start;
   }
@@ -495,7 +542,6 @@ body {
   height: 0;
 }
 
-/* The slider */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -558,6 +604,10 @@ input:checked + .slider:before {
  background-color: #333;
 }
 
+.night .days-schedule-container {
+  background-color: #333;
+}
+
 .night .controls button {
  background-color: #3498db;
  color: #222;
@@ -593,6 +643,10 @@ input:checked + .slider:before {
  color: #ddd;
 }
 
+.night .current-time .time-bar {
+  background-color: #22618c;
+}
+
 .night .time-bar-block .schedule-content {
  border: 1px solid #444;
 }
@@ -611,11 +665,11 @@ input:checked + .slider:before {
 }
 
 .night .schedule .class strong[data-course="lection"] {
- background-color: #2980b9;
+ background-color: #22618c;
 }
 
 .night .schedule .class strong[data-course="seminar"] {
- background-color: #1abc9c;
+ background-color: #1a7440;
 }
 
 .night .schedule .class strong[data-course="language"] {
@@ -663,6 +717,15 @@ input:checked + .slider:before {
   background-color: #222;
   color: #ffffff;
 }
+
+.night #upper-week:not(.active):hover,
+.night #lower-week:not(.active):hover,
+.night #normal-mode:not(.active):hover,
+.night #alternative-mode:not(.active):hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
 
 .night .mode-buttons button:hover {
  background-color: #4cbd50;
