@@ -385,7 +385,12 @@ const scheduleData = {
       "alternative": true
     },
   ],
-
+  "saturday": [
+    {},
+    ],
+  "sunday": [
+    {}
+    ]
   };
 
 const parameterIcons = {
