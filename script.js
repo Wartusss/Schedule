@@ -400,6 +400,12 @@ const courseNames = {
 };
 
 const days = document.querySelectorAll('.day');
+days.forEach(day => {
+    const dayName = day.dataset.day;
+    if (dayName === 'saturday' || dayName === 'sunday') {
+        day.style.display = 'none';
+    }
+});
 const scheduleContent = document.querySelectorAll('.schedule-content');
 const today = new Date().getDay();
 let currentDay = '';
