@@ -407,7 +407,7 @@ body {
   }
 
   .time-bar {
-    margin-right: 15px;
+    margin-right: 10px;
   }
 
   .days {
@@ -416,6 +416,7 @@ body {
     overflow-x: auto;
     margin-bottom: 10px;
   }
+
   .days button {
     flex: 1;
     white-space: nowrap;
@@ -459,7 +460,7 @@ body {
     flex: 1;
     min-width: 100px;
   }
-  
+
   .controls button:last-child {
     margin-right: 0;
   }
@@ -475,8 +476,31 @@ body {
   .mode-buttons button:last-child {
     margin-right: 0;
   }
-  
+
+  .time-bar-block {
+    margin-top: 10px;
+    margin-bottom: 0;
   }
+
+  .time-bar-block .time-bar {
+    margin-right: 10px;
+  }
+
+  .schedule-content,
+  .days {
+    margin: 0;
+    padding: 0;
+  }
+
+  .schedule-content .class p,
+  .schedule-content .class strong {
+    line-height: 1.2;
+  }
+
+  .schedule-content .class br {
+    display: none;
+  }
+}
   
 #upper-week:not(.active),
 #lower-week:not(.active),
