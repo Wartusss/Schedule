@@ -410,6 +410,23 @@ body {
     margin-right: 10px;
   }
 
+  .time-bar-block .schedule-content {
+    background-color: #fff;
+    border: 1px solid rgba(159, 169, 208, 0.5);
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px;
+    padding: 25px;
+    overflow-x: auto;
+    overflow-y: auto;
+    font-size: 14px;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+  }
+  
   .days {
     display: flex;
     justify-content: space-between;
