@@ -141,25 +141,19 @@ body {
   border-radius: 5px;
   cursor: pointer;
   background-color: transparent;
-  color: #212121;
+  color: #333;
   transition: background-color 0.2s ease;
   font-size: 14px;
   font-weight: bold;
-  font-family: 'Roboto', sans-serif;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.days button .abbreviated-title {
-  display: none;
-  transition: opacity 0.2s ease;
-  font-size: 14px;
-  font-weight: bold;
-  margin-top: 5px;
 }
 
 .days button.active {
   background-color: #3498db;
   color: #fff;
+}
+
+.days button .abbreviated-title {
+  display: none;
 }
 
 .days button:hover {
