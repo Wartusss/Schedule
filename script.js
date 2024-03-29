@@ -621,28 +621,30 @@ if (today === 0) {
     displaySchedule(currentDay);
 }
 
-  const currentTime = new Date();
-  const currentHour = currentTime.getHours();
-  const currentMinute = currentTime.getMinutes();
-  const currentTimeInMinutes = currentHour * 60 + currentMinute;
+const kyivTimeZone = 'Europe/Kiev';
 
-  const timePeriods = [
-    { start: 13 * 60 + 5, end: 14 * 60 + 25 },
-    { start: 14 * 60 + 40, end: 16 * 60 },
-    { start: 16 * 60 + 20, end: 17 * 60 + 40 },
-    { start: 17 * 60 + 55, end: 19 * 60 + 15 }
-  ];
+const currentTime = new Date().toLocaleString('en-US', {timeZone: kyivTimeZone});
+const currentHour = new Date(currentTime).getHours();
+const currentMinute = new Date(currentTime).getMinutes();
+const currentTimeInMinutes = currentHour * 60 + currentMinute;
 
-  let highlightedIndex = -1;
-  for (let i = 0; i < timePeriods.length; i++) {
-    const { start, end } = timePeriods[i];
-    if (currentTimeInMinutes >= start && currentTimeInMinutes <= end) {
-      highlightedIndex = i;
-      break;
-    }
+const timePeriods = [
+  { start: 13 * 60 + 5, end: 14 * 60 + 25 },
+  { start: 14 * 60 + 40, end: 16 * 60 },
+  { start: 16 * 60 + 20, end: 17 * 60 + 40 },
+  { start: 17 * 60 + 55, end: 19 * 60 + 15 }
+];
+
+let highlightedIndex = -1;
+for (let i = 0; i < timePeriods.length; i++) {
+  const { start, end } = timePeriods[i];
+  if (currentTimeInMinutes >= start && currentTimeInMinutes <= end) {
+    highlightedIndex = i;
+    break;
   }
+}
 
-  if (highlightedIndex !== -1) {
-    const timeBarBlocks = document.querySelectorAll('.time-bar-block');
-    timeBarBlocks[highlightedIndex].classList.add('current-time');
-  }
+if (highlightedIndex !== -1) {
+  const timeBarBlocks = document.querySelectorAll('.time-bar-block');
+  timeBarBlocks[highlightedIndex].classList.add('current-time');
+}
