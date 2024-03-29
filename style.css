@@ -28,9 +28,12 @@ body {
   margin-bottom: 32px;
 }
 
-.container, .days-schedule-container {
+.container,
+.days-schedule-container {
   border: 1px solid #9fa9d0;
+  margin-bottom: 20px;
 }
+
 .controls {
   display: flex;
   justify-content: space-between;
@@ -39,19 +42,22 @@ body {
 }
 
 .controls > div {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .controls button {
-  padding: 10px 20px;
+  padding: 15px 30px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   color: #fff;
   transition: background-color 0.2s ease;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  background-color: #007bff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
 }
 
@@ -64,6 +70,19 @@ body {
   background-color: #0260c5;
 }
 
+.controls button:active {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+#upper-week {
+  border-radius: 5px 0px 0px 5px;
+}
+
+#lower-week {
+  border-radius: 0px 5px 5px 0px;
+}
+
+
 .mode-buttons {
   display: flex;
   justify-content: space-between;
@@ -72,13 +91,16 @@ body {
 
 .mode-buttons button {
   flex: 1;
-  padding: 10px;
+  padding: 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .mode-buttons button.active {
@@ -89,6 +111,19 @@ body {
 .mode-buttons button:hover {
   background-color: #45a049;
   color: #fff;
+}
+
+
+.mode-buttons button:active {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+#normal-mode {
+  border-radius: 5px 0px 0px 5px;
+}
+
+#alternative-mode {
+  border-radius: 0px 5px 5px 0px;
 }
 
 .days {
@@ -106,19 +141,25 @@ body {
   border-radius: 5px;
   cursor: pointer;
   background-color: transparent;
-  color: #333;
+  color: #212121;
   transition: background-color 0.2s ease;
   font-size: 14px;
   font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.days button .abbreviated-title {
+  display: none;
+  transition: opacity 0.2s ease;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
 }
 
 .days button.active {
   background-color: #3498db;
   color: #fff;
-}
-
-.days button .abbreviated-title {
-  display: none;
 }
 
 .days button:hover {
