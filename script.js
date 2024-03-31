@@ -202,7 +202,7 @@ const scheduleData = {
       "course": "language",
       "title": "Англійська / Французька / Німецька / Іспанська",
       "teacher": "Шевченко О. Ф. / Рижова І. А./ Симканич О. В. / Невинна Ю. П.",
-      "location": "153 / 456 / Онлайн / 452 ауд.",
+      "location": "340 / 456 / Онлайн / 452 ауд.",
       "additionalInfo": "",
       "alternative": false
     },
@@ -243,7 +243,7 @@ const scheduleData = {
       "course": "language",
       "title": "Англійська / Французька / Німецька / Іспанська",
       "teacher": "Шевченко О. Ф. / Рижова І. А. / Симканич О.В. / Невинна Ю. П.",
-      "location": "153 / 456 / Онлайн / 452 ауд.",
+      "location": "340 / 456 / Онлайн / 452 ауд.",
       "additionalInfo": "",
       "alternative": true
     },
@@ -295,7 +295,7 @@ const scheduleData = {
       "course": "language",
       "title": "Англійська / Французька / Німецька / Іспанська",
       "teacher": "Шевченко О. Ф. / Рижова І. А. / Симканич О. В. / Невинна Ю. П.",
-      "location": "153 / 456 / Онлайн / 452 ауд.",
+      "location": "340 / 456 / Онлайн / 452 ауд.",
       "additionalInfo": "",
       "alternative": false
     },
@@ -336,7 +336,7 @@ const scheduleData = {
       "course": "language",
       "title": "Англійська / Французька / Німецька / Іспанська",
       "teacher": "Шевченко О. Ф. / Рижова І. А. / Симканич О. В. / Невинна Ю. П.",
-      "location": "153 / 456 / Онлайн / 452 ауд.",
+      "location": "340 / 456 / Онлайн / 452 ауд.",
       "additionalInfo": "",
       "alternative": true
     },
