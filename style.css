@@ -8,10 +8,6 @@ body {
   line-height: 1.5;
 }
 
-.favicon {
-  border-radius: 50%; 
-}
-
 .container {
   max-width: 100%;
   margin: 0 auto;
@@ -139,16 +135,17 @@ body {
 
 .days button {
   flex: 1;
-  white-space: nowrap;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   background-color: transparent;
-  color: #333;
-  transition: background-color 0.2s ease;
-  font-size: 14px;
-  font-weight: bold;
+  color: #555;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  outline: none;
 }
 
 .days button.active {
@@ -156,13 +153,20 @@ body {
   color: #fff;
 }
 
+.days button.active:hover {
+  background-color: #3089c5;
+  color: #fff;
+}
+
+.days button:hover {
+  background-color: #f4f4f4;
+  color: #222;
+}
+
 .days button .abbreviated-title {
   display: none;
 }
 
-.days button:hover {
-  background-color: #2980b9;
-}
 
 .time-bar {
   width: 40px;
@@ -421,16 +425,16 @@ body {
 
   .days button {
     flex: 1;
-    white-space: nowrap;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     background-color: transparent;
-    color: #333;
-    transition: background-color 0.2s ease;
+    color: #555;
+    transition: background-color 0.3s ease, color 0.3s ease;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 600;
+    outline: none;
   }
 
   .days button:last-child {
