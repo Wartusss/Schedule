@@ -34,21 +34,27 @@
 }
 
 .night .days button {
- color: #bbb;
+ color: #ffffff;
 }
 
 .night .days button.active {
  background-color: #2980b9;
- color: #222;
+ color: #ffffff;
 }
 
 .night .days button:hover {
- background-color: #1775ad;
+  background-color: #444;
+  color: #ffffff;
+}
+
+.days button.active:hover {
+  background-color: #126391;
+  color: #fff;
 }
 
 .night .time-bar-block:before,
 .night .time-bar-block:after {
-  background: #444;
+  background: #333;
 }
 
 .night .time-bar-block:first-child .time-bar:before {
@@ -170,7 +176,7 @@
 
 
 .night .mode-buttons button:hover {
- background-color: #4cbd50;
+ background-color: #51c255;
  color: #222;
 }
 
