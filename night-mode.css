@@ -164,7 +164,7 @@
 .night #lower-week:not(.active):hover,
 .night #normal-mode:not(.active):hover,
 .night #alternative-mode:not(.active):hover {
-  background-color: #000000;
+  background-color: #131111;
   color: #ffffff;
 }
 
