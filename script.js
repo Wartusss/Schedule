@@ -303,9 +303,9 @@ const scheduleData = {
     {
       "time": "13:05",
       "week": "lower",
-      "course": "lection",
-      "title": "Історія Канади",
-      "teacher": "Сухобокова О. О.",
+      "course": "seminar",
+      "title": "Історичні витоки політичної культури американського суспільства",
+      "teacher": "Корнієнко А. Ю.",
       "location": "448 аудиторія",
       "additionalInfo": "",
       "alternative": true
@@ -313,9 +313,9 @@ const scheduleData = {
     {
       "time": "14:40",
       "week": "upper",
-      "course": "seminar",
-      "title": "Історичні витоки політичної культури американського суспільства",
-      "teacher": "Корнієнко А. Ю.",
+      "course": "lection",
+      "title": "Історія Канади",
+      "teacher": "Сухобокова О. О.",
       "location": "448 аудиторія",
       "additionalInfo": "",
       "alternative": true
