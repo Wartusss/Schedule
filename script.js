@@ -181,9 +181,9 @@ const scheduleData = {
       "week": "all",
       "course": "lection",
       "title": "Історія Східної Європи та Росії",
-      "teacher": "Мордвінцев В. М.",
+      "teacher": "Ляпіна О. В.",
       "location": "Онлайн; 10:00",
-      "additionalInfo": "https://zoom.us/j/5169999552?pwd=UENVOXlJYm9hcWRQTDFnd3ZMemgzdz09",
+      "additionalInfo": "https://knu-ua.zoom.us/j/6900664408?pwd=UHlWNjM5aGNhQ0dlTVF6RWxRTlpnUT09&omn=83659464308",
       "alternative": false
     },
     {
@@ -222,9 +222,9 @@ const scheduleData = {
       "week": "all",
       "course": "lection",
       "title": "Історія Східної Європи та Росії",
-      "teacher": "Мордвінцев В. М.",
+      "teacher": "Ляпіна О. В.",
       "location": "Онлайн; 10:00",
-      "additionalInfo": "https://zoom.us/j/5169999552?pwd=UENVOXlJYm9hcWRQTDFnd3ZMemgzdz09",
+      "additionalInfo": "https://knu-ua.zoom.us/j/6900664408?pwd=UHlWNjM5aGNhQ0dlTVF6RWxRTlpnUT09&omn=83659464308",
       "alternative": true
     },
     {
