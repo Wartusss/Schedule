@@ -181,7 +181,7 @@ const scheduleData = {
       "course": "lection",
       "title": "Нова історія країн Азії та Африки",
       "teacher": "Сухобокова О. О.",
-      "location": "448 ауд.",
+      "location": "457 ауд.",
       "additionalInfo": "",
       "alternative": false
     },
