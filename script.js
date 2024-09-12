@@ -36,7 +36,7 @@ const scheduleData = {
       "course": "lection",
       "title": "Нова та новітня історія Центральної та Південно-Східної Європи",
       "teacher": "Малацай І. В.",
-      "location": "351",
+      "location": "351 ауд.",
       "additionalInfo": "",
       "alternative": false
     },
@@ -47,7 +47,7 @@ const scheduleData = {
       "course": "seminar",
       "title": "Американські митці українського походження",
       "teacher": "Сухобокова О. О.",
-      "location": "347",
+      "location": "347 ауд.",
       "additionalInfo": "",
       "alternative": true
     },
@@ -57,7 +57,7 @@ const scheduleData = {
       "course": "lection",
       "title": "Американські митці українського походження",
       "teacher": "Сухобокова О. О.",
-      "location": "347",
+      "location": "347 ауд.",
       "additionalInfo": "",
       "alternative": true
     },
@@ -67,7 +67,7 @@ const scheduleData = {
       "course": "lection",
       "title": "Нова та новітня історія Центральної та Південно-Східної Європи",
       "teacher": "Малацай І. В.",
-      "location": "351",
+      "location": "351 ауд.",
       "alternative": true
     }
   ],
@@ -78,7 +78,7 @@ const scheduleData = {
       "course": "lection",
       "title": "Нова історія країн Західної Європи та Північної Америки		",
       "teacher": "Машевський О. П.",
-      "location": "347",
+      "location": "347 ауд.",
       "additionalInfo": "",
       "alternative": false
     },
@@ -119,7 +119,7 @@ const scheduleData = {
       "course": "lection",
       "title": "Нова історія країн Західної Європи та Північної Америки		",
       "teacher": "Машевський О. П.",
-      "location": "347",
+      "location": "347 ауд.",
       "additionalInfo": "",
       "alternative": true
     },
