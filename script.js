@@ -156,7 +156,7 @@ const scheduleData = {
   ],
   "wednesday": [
     {
-        "time": "14:40",
+        "time": "13:05",
         "week": "lower",
         "course": "seminar",
         "title": "Нова СССР",
@@ -177,7 +177,7 @@ const scheduleData = {
     },
     // Америка
   {
-    "time": "14:40",
+    "time": "13:05",
     "week": "upper",
     "course": "seminar",
     "title": "Нова СССР",
