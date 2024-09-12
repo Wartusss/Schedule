@@ -560,32 +560,25 @@ body {
   }
 
 }
-.theme-switch i {
-  margin-right: 5px;
+
+.theme-switch i { 
+  margin-right: 8px;
+  font-size: 1.2em;
+  color: #555; 
 }
+
 .theme-switch label {
-  margin: 0 5px;
-}
-.theme-switch .fa-lightbulb {
-  font-size: 18px;
-  margin-bottom: -8px;
-}
-
-.theme-switch .fa-moon {
-  font-size: 18px;
-  margin-bottom: -9px;
-}
-
-
-.theme-switch .fa-moon {
-  margin-left: -13px;
+  margin: 0 10px;
+  font-weight: 500;
+  color: #333; 
 }
 
 .switch {
   position: relative;
   display: inline-block;
-  width: 72px;
-  height: 46px;
+  width: 4em;
+  height: 2.7em;
+  margin-bottom: 10px !important;
 }
 
 .switch input {
@@ -597,47 +590,59 @@ body {
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 5px;
+  top: 0;
   left: 0;
-  right: 12px;
-  bottom: 12px;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-  border-radius: 34px;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, #f0f0f0 50%, #1e1e1e 50%) no-repeat;
+  background-size: 205%;
+  background-position: 0;
+  border-radius: 99em;
+  transition: background-position 0.4s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .slider:before {
   position: absolute;
-  content: "";
-  height: 25px;
-  width: 25px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-  border-radius: 50%;
+  content: "\f005";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #A1A1A1;
+  font-size: 1.3em;
+  left: 0.35em;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.4s ease;
 }
 
 input:checked + .slider {
-  background-color: #444;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #444;
+  background-position: 100%;
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  content: "\f186";
+  left: calc(100% - 1.6em);
+  color: #A1A1A1;
 }
 
-.slider.round {
-  border-radius: 34px;
+.theme-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.slider.round:before {
-  border-radius: 50%;
+@media (max-width: 600px) {
+  .theme-switch {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .switch {
+    margin: 0 auto;
+  }
+
+  .theme-switch label {
+    text-align: center;
+    width: 100%;
+  }
 }
