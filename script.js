@@ -109,7 +109,7 @@ const scheduleData = {
       "title": "Історія цивілізацій Доколумбової Америки",
       "teacher": "Полюхович Ю. Ю.",
       "location": "Онлайн",
-      "additionalInfo": "",
+      "additionalInfo": "https://us04web.zoom.us/j/9182807882?pwd=blp5cFN1c3lJNzhUY0J0L1NtWXVhdz09",
       "alternative": false
     },
     // Америка
@@ -150,7 +150,7 @@ const scheduleData = {
       "title": "Історія цивілізацій Доколумбової Америки",
       "teacher": "Полюхович Ю. Ю.",
       "location": "Онлайн",
-      "additionalInfo": "",
+      "additionalInfo": "https://us04web.zoom.us/j/9182807882?pwd=blp5cFN1c3lJNzhUY0J0L1NtWXVhdz09",
       "alternative": true
     },
   ],
