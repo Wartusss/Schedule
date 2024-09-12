@@ -155,13 +155,23 @@ const scheduleData = {
     },
   ],
   "wednesday": [
+     {
+        "time": "13:05",
+        "week": "upper",
+        "course": "seminar",
+        "title": "Нова історія країн Азії та Африки",
+        "teacher": "Сухобокова О. О.",
+        "location": "457 ауд.",
+        "additionalInfo": "",
+        "alternative": false
+    },   
     {
         "time": "13:05",
         "week": "lower",
         "course": "seminar",
         "title": "Нова СССР",
         "teacher": "Топольницька Ю. А.",
-        "location": "448 ауд.",
+        "location": "453 ауд.",
         "additionalInfo": "",
         "alternative": false
     },
@@ -176,13 +186,23 @@ const scheduleData = {
       "alternative": false
     },
     // Америка
+   {
+     "time": "13:05",
+     "week": "lower",
+     "course": "seminar",
+     "title": "Нова історія країн Азії та Африки",
+     "teacher": "Сухобокова О. О.",
+     "location": "457 ауд.",
+     "additionalInfo": "",
+     "alternative": true
+  },   
   {
     "time": "13:05",
     "week": "upper",
     "course": "seminar",
     "title": "Нова СССР",
     "teacher": "Топольницька Ю. А.",
-    "location": "448 ауд.",
+    "location": "453 ауд.",
     "additionalInfo": "",
     "alternative": true
   },
@@ -192,7 +212,7 @@ const scheduleData = {
     "course": "lection",
     "title": "Нова історія країн Азії та Африки",
     "teacher": "Сухобокова О. О.",
-    "location": "448 ауд.",
+    "location": "457 ауд.",
     "additionalInfo": "",
     "alternative": true
   },
