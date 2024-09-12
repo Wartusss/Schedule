@@ -107,7 +107,7 @@ const scheduleData = {
       "week": "all",
       "course": "lection",
       "title": "Історія цивілізацій Доколумбової Америки",
-      "teacher": "Пуховець Д. С.",
+      "teacher": "Полюхович Ю. Ю.",
       "location": "Онлайн",
       "additionalInfo": "",
       "alternative": false
@@ -148,7 +148,7 @@ const scheduleData = {
       "week": "all",
       "course": "lection",
       "title": "Історія цивілізацій Доколумбової Америки",
-      "teacher": "Пуховець Д. С.",
+      "teacher": "Полюхович Ю. Ю.",
       "location": "Онлайн",
       "additionalInfo": "",
       "alternative": true
@@ -301,14 +301,14 @@ const scheduleData = {
       "additionalInfo": "",
       "alternative": false
     },
-    //
+    // Америка
     {
       "time": "16:20",
       "week": "all",
       "course": "seminar",
       "title": "Нова історія країн Західної Європи та Північної Америки",
       "teacher": "Кошелєв А. О.",
-      "location": "153 ауд.",
+      "location": "440 ауд.",
       "additionalInfo": "",
       "alternative": true
     },
@@ -318,7 +318,7 @@ const scheduleData = {
       "course": "seminar",
       "title": "Нова та новітня історія Центральної та Південно-Східної Європи",
       "teacher": "Гуменний С. Л.",
-      "location": "451 ауд.",
+      "location": "446 ауд.",
       "additionalInfo": "",
       "alternative": true
     },
