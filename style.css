@@ -296,6 +296,7 @@ body {
   margin-bottom: 10px;
   cursor: pointer;
   flex-wrap: wrap;
+  hyphens: auto;
 }
 
 .schedule .class strong {
@@ -312,6 +313,7 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
   flex-wrap: wrap;
+  overflow-wrap: break-word;
 }
 
 .schedule .class strong[data-course="lection"] {
@@ -458,6 +460,7 @@ input:checked + .slider:before {
   justify-content: center;
 }
 
+
 /* 
 налаштування окремих скрін версій
 */ 
@@ -481,7 +484,9 @@ input:checked + .slider:before {
 @media (max-width: 768px) {
   .schedule .class strong,
   .schedule .class p {
+    word-wrap: break-word;
     white-space: normal;
+    line-height: 1.4;
   }
 
   .schedule {
@@ -617,7 +622,9 @@ input:checked + .slider:before {
 @media (min-width: 769px) {
   .schedule .class strong,
   .schedule .class p {
-    white-space: nowrap;
+    word-wrap: break-word;
+    white-space: normal;
+    line-height: 1.4;
   }
 
   .container {
@@ -643,6 +650,7 @@ input:checked + .slider:before {
   .schedule .class {
     flex-basis: calc(50% - 20px);
     margin-right: 20px;
+    hyphens: auto;
   }
 
   .schedule .class:nth-child(odd) {
