@@ -567,21 +567,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
       openInDefaultBrowser(target);
     });
   });
-});
 
-if (today === 0) {
-  const currentDayElement = days[6];
+  const today = new Date().getDay();
   resetActiveDay();
-  currentDayElement.classList.add('active');
-  currentDay = currentDayElement.dataset.day;
+
+  if (today === 0) {
+    const currentDayElement = days[6];
+    currentDayElement.classList.add('active');
+    currentDay = currentDayElement.dataset.day;
+  } else {
+    const currentDayElement = days[today - 1];
+    currentDayElement.classList.add('active');
+    currentDay = currentDayElement.dataset.day;
+  }
+
   displaySchedule(currentDay);
-} else if (today === 6) {
-  const currentDayElement = days[0];
-  resetActiveDay();
-  currentDayElement.classList.add('active');
-  currentDay = currentDayElement.dataset.day;
-  displaySchedule(currentDay);
-}
+});
 
 const kyivTimeZone = 'Europe/Kiev';
 
