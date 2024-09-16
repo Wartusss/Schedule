@@ -75,11 +75,11 @@ body {
 }
 
 #upper-week {
-  border-radius: 5px 0px 0px 5px;
+  border-radius: 99em 0px 0px 99em;
 }
 
 #lower-week {
-  border-radius: 0px 5px 5px 0px;
+  border-radius: 0px 99em 99em 0px;
 }
 
 
@@ -119,11 +119,11 @@ body {
 }
 
 #normal-mode {
-  border-radius: 5px 0px 0px 5px;
+  border-radius: 99em 0px 0px 99em;
 }
 
 #alternative-mode {
-  border-radius: 0px 5px 5px 0px;
+  border-radius: 0px 99em 99em 0px;
 }
 
 .days {
@@ -444,6 +444,10 @@ body {
   transition: 0.4s ease;
 }
 
+.switch:hover .slider {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 input:checked + .slider {
   background-position: 100%;
 }
@@ -459,7 +463,6 @@ input:checked + .slider:before {
   align-items: center;
   justify-content: center;
 }
-
 
 /* 
 налаштування окремих скрін версій
