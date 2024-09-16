@@ -109,7 +109,7 @@ const scheduleData = {
       "title": "Історія цивілізацій Доколумбової Америки",
       "teacher": "Полюхович Ю. Ю.",
       "location": "Онлайн",
-      "additionalInfo": "https://telegra.ph/Discipl%D1%96na-v%D1%96lnogo-viboru-studenta-09-08",
+      "additionalInfo": "https://us04web.zoom.us/j/9182807882?pwd=blp5cFN1c3lJNzhUY0J0L1NtWXVhdz09",
       "alternative": false
     },
     // Америка
