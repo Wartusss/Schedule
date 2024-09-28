@@ -161,7 +161,7 @@ const scheduleData = {
         "course": "seminar",
         "title": "Нова історія країн Азії та Африки",
         "teacher": "Сухобокова О. О.",
-        "location": "457 ауд.",
+        "location": "446 ауд.",
         "additionalInfo": "",
         "alternative": false
     },   
@@ -181,7 +181,7 @@ const scheduleData = {
       "course": "lection",
       "title": "Нова історія країн Азії та Африки",
       "teacher": "Сухобокова О. О.",
-      "location": "457 ауд.",
+      "location": "446 ауд.",
       "additionalInfo": "",
       "alternative": false
     },
@@ -192,7 +192,7 @@ const scheduleData = {
      "course": "seminar",
      "title": "Нова історія країн Азії та Африки",
      "teacher": "Сухобокова О. О.",
-     "location": "457 ауд.",
+     "location": "446 ауд.",
      "additionalInfo": "",
      "alternative": true
   },   
